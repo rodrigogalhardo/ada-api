@@ -24,7 +24,7 @@ pragma Elaborate_All (Stm32.GPIO);
 
 procedure Example is
 --Define the Pin
-  Pin : constant Pin_Type := (GPIOE, 4);
+  Pin : constant Pin_Type := (GPIOD, 12);
 begin
 --Configure the pin as an output pin.
    Setup_Out_Pin(Pin);
