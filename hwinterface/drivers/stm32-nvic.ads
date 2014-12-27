@@ -1317,16 +1317,88 @@ package Stm32.NVIC is
   -- FPU global interrupt
   FPU_IRQn                : constant IRQn_Type := 97;
 
+--****t* Stm32.NVIC/IRQ_Priority
+--
+--  NAME
+--    IRQ_Priority -- Priority of the interrupt.
+--  USAGE
+--    This is the priority of the interrupt, an integer between 0 and 15.
+--
+--*****
+
   type IRQ_Priority is new Integer range 0 .. 15;
+
+--****f* Stm32.NVIC/EnableIRQ
+--
+--  NAME
+--    EnableIRQ -- Enable an interrupt.
+--  SYNOPSIS
+--    EnableIRQ(IRQn);
+--  FUNCTION
+--    Enable the given interrupt.
+--  INPUTS
+--    IRQn - The number of the interrupt, of type IRQn_Type.
+--  SEE ALSO
+--    IRQn_Type
+--
+--*****
 
   procedure EnableIRQ (IRQn : IRQn_Type);
   pragma Import (C, EnableIRQ, "NVIC_EnableIRQ");
 
+--****f* Stm32.NVIC/DisableIRQ
+--
+--  NAME
+--    DisableIRQ -- Disable an interrupt.
+--  SYNOPSIS
+--    DisableIRQ(IRQn);
+--  FUNCTION
+--    Disable the given interrupt.
+--  INPUTS
+--    IRQn - The number of the interrupt, of type IRQn_Type.
+--  SEE ALSO
+--    IRQn_Type
+--
+--*****
+
   procedure DisableIRQ (IRQn : IRQn_Type);
   pragma Import (C, DisableIRQ, "NVIC_DisableIRQ");
 
+--****f* Stm32.NVIC/GetPendingIRQ
+--
+--  NAME
+--    GetPendingIRQ -- Get the state of an interrupt.
+--  SYNOPSIS
+--    value := GetPendingIRQ(IRQn);
+--  FUNCTION
+--    Says if the given interrupt is activated or not.
+--  INPUTS
+--    IRQn - The number of the interrupt, of type IRQn_Type.
+--  RESULT
+--    value - A Boolean representing the state of the interrupt.
+--  SEE ALSO
+--    IRQn_Type
+--
+--*****
+
   function GetPendingIRQ (IRQn : IRQn_Type) return Boolean;
   pragma Inline (GetPendingIRQ);
+
+--****f* Stm32.NVIC/NVIC_Init
+--
+--  NAME
+--    NVIC_Init -- Initialize the interrupt.
+--  SYNOPSIS
+--    NVIC_Init(IRQn, Priority);
+--  FUNCTION
+--    Initialize an interrupt with the given priority.
+--  INPUTS
+--    IRQn     - The number of the interrupt to initialize, of type IRQn_Type.
+--    Priority - The priority of the interrupt, of type IRQ_Priority
+--  SEE ALSO
+--    IRQn_Type, IRQ_Priority
+--
+--*****
 
   procedure NVIC_Init (IRQn: IRQn_Type; Priority : IRQ_Priority);
 
