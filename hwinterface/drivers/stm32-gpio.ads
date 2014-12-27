@@ -210,46 +210,46 @@ package Stm32.GPIO is
 --    Alternate_Function -- Describes the alternate functions.
 --  USAGE
 --    Choose between :
---    AF_RTC_50Hz : RTC_50Hz Alternate Function mapping
---    AF_MCO : MCO (MCO1 and MCO2) Alternate Function mapping
---    AF_TAMPER : TAMPER (TAMPER_1 and TAMPER_2) Alternate Function mapping
---    AF_SWJ : SWJ (SWD and JTAG) Alternate Function mapping
---    AF_TRACE : TRACE Alternate Function mapping
---    AF_TIM1 : TIM1 Alternate Function mapping
---    AF_TIM2 : TIM2 Alternate Function mapping
---    AF_TIM3 : TIM3 Alternate Function mapping
---    AF_TIM4 : TIM4 Alternate Function mapping
---    AF_TIM5 : TIM5 Alternate Function mapping
---    AF_TIM8 : TIM8 Alternate Function mapping
---    AF_TIM9 : TIM9 Alternate Function mapping
---    AF_TIM10 : TIM10 Alternate Function mapping
---    AF_TIM11 : TIM11 Alternate Function mapping
---    AF_I2C1 : I2C1 Alternate Function mapping
---    AF_I2C2 : I2C2 Alternate Function mapping
---    AF_I2C3 : I2C3 Alternate Function mapping
---    AF_SPI1 : SPI1 Alternate Function mapping
---    AF_SPI2 : SPI2/I2S2 Alternate Function mapping
---    AF_SPI3 : SPI3/I2S3 Alternate Function mapping
---    AF_USART1 : USART1 Alternate Function mapping
---    AF_USART2 : USART2 Alternate Function mapping
---    AF_USART3 : USART3 Alternate Function mapping
---    AF_I2S3ext : I2S3ext Alternate Function mapping
---    AF_UART4 : UART4 Alternate Function mapping
---    AF_UART5 : UART5 Alternate Function mapping
---    AF_USART6 : USART6 Alternate Function mapping
---    AF_CAN1 : CAN1 Alternate Function mapping
---    AF_CAN2 : CAN2 Alternate Function mapping
---    AF_TIM12 : TIM12 Alternate Function mapping
---    AF_TIM13 : TIM13 Alternate Function mapping
---    AF_TIM14 : TIM14 Alternate Function mapping
---    AF_OTG_FS : OTG_FS Alternate Function mapping
---    AF_OTG_HS : OTG_HS Alternate Function mapping
---    AF_ETH : ETHERNET Alternate Function mapping
---    AF_FSMC : FSMC Alternate Function mapping
---    AF_OTG_HS_FS : OTG HS configured in FS, Alternate Function mapping
---    AF_SDIO : SDIO Alternate Function mapping
---    AF_DCMI : DCMI Alternate Function mapping
---    AF_EVENTOUT : EVENTOUT Alternate Function mapping
+--    * AF_RTC_50Hz : RTC_50Hz Alternate Function mapping
+--    * AF_MCO : MCO (MCO1 and MCO2) Alternate Function mapping
+--    * AF_TAMPER : TAMPER (TAMPER_1 and TAMPER_2) Alternate Function mapping
+--    * AF_SWJ : SWJ (SWD and JTAG) Alternate Function mapping
+--    * AF_TRACE : TRACE Alternate Function mapping
+--    * AF_TIM1 : TIM1 Alternate Function mapping
+--    * AF_TIM2 : TIM2 Alternate Function mapping
+--    * AF_TIM3 : TIM3 Alternate Function mapping
+--    * AF_TIM4 : TIM4 Alternate Function mapping
+--    * AF_TIM5 : TIM5 Alternate Function mapping
+--    * AF_TIM8 : TIM8 Alternate Function mapping
+--    * AF_TIM9 : TIM9 Alternate Function mapping
+--    * AF_TIM10 : TIM10 Alternate Function mapping
+--    * AF_TIM11 : TIM11 Alternate Function mapping
+--    * AF_I2C1 : I2C1 Alternate Function mapping
+--    * AF_I2C2 : I2C2 Alternate Function mapping
+--    * AF_I2C3 : I2C3 Alternate Function mapping
+--    * AF_SPI1 : SPI1 Alternate Function mapping
+--    * AF_SPI2 : SPI2/I2S2 Alternate Function mapping
+--    * AF_SPI3 : SPI3/I2S3 Alternate Function mapping
+--    * AF_USART1 : USART1 Alternate Function mapping
+--    * AF_USART2 : USART2 Alternate Function mapping
+--    * AF_USART3 : USART3 Alternate Function mapping
+--    * AF_I2S3ext : I2S3ext Alternate Function mapping
+--    * AF_UART4 : UART4 Alternate Function mapping
+--    * AF_UART5 : UART5 Alternate Function mapping
+--    * AF_USART6 : USART6 Alternate Function mapping
+--    * AF_CAN1 : CAN1 Alternate Function mapping
+--    * AF_CAN2 : CAN2 Alternate Function mapping
+--    * AF_TIM12 : TIM12 Alternate Function mapping
+--    * AF_TIM13 : TIM13 Alternate Function mapping
+--    * AF_TIM14 : TIM14 Alternate Function mapping
+--    * AF_OTG_FS : OTG_FS Alternate Function mapping
+--    * AF_OTG_HS : OTG_HS Alternate Function mapping
+--    * AF_ETH : ETHERNET Alternate Function mapping
+--    * AF_FSMC : FSMC Alternate Function mapping
+--    * AF_OTG_HS_FS : OTG HS configured in FS, Alternate Function mapping
+--    * AF_SDIO : SDIO Alternate Function mapping
+--    * AF_DCMI : DCMI Alternate Function mapping
+--    * AF_EVENTOUT : EVENTOUT Alternate Function mapping
 --
 --*****
   type Alternate_Function is (
