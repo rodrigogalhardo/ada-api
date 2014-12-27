@@ -17,7 +17,31 @@
 --
 --------------------------------------------------------------------------------
 
+--****c* Stm32.Defines/Stm32.Defines
+--
+--  NAME
+--    Stm32.Defines -- Defines some constants.
+--  COPYRIGHT
+--    (c) 2014 by Julien Brette & Julien Romero
+--  SYNOPSIS
+--    with Stm32.Defines;
+--  DESCRIPTION
+--    Contains some global constants.
+--  AUTHOR
+--    Julien Brette & Julien Romero
+--
+--*****
+
 package Stm32.Defines is
+
+--****t* Stm32.Defines/FunctionalState
+--
+--  NAME
+--    FunctionalState -- Stands for a functional state.
+--  USAGE
+--    Choose between Disable and Enable.
+--
+--*****
 
   type FunctionalState is (Disable, Enable);
   for FunctionalState use (Disable => 0, Enable => 1);
