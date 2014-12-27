@@ -405,7 +405,7 @@ package Stm32.GPIO is
 
   procedure Setup_In_Pin (Pin : Pin_Type);
 
---*****f* Stm32.GPIO/Setup_Out_Pin
+--****f* Stm32.GPIO/Setup_Out_Pin
 --
 --  NAME
 --    Setup_Out_Pin -- Setup a pin in output mode
