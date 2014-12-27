@@ -395,17 +395,18 @@ package Stm32.UART is
 --****f* Stm32.UART/Setup_DMA
 --
 --  NAME
---    Setup_Data --
+--    Setup_DMA -- Controls the DMA requests activations.
 --  SYNOPSIS
---    Setup_Data(UART, Req, State);
+--    Setup_DMA(UART, Req, State);
 --  FUNCTION
---
+--    Activate or desactivate the USART DMA request for the given UART and for
+--the given request type.
 --  INPUTS
 --    UART  - The Number of the UART, of type UART_Number
---    Req   -
+--    Req   - The request type, of type DMA_Req_Type
 --    State - The state of the DMA, of type FunctionalState.
 --  SEE ALSO
---    UART_Number, Stm32.DMA/DMA_Req_Type, Stm32.Defines/FunctionalState
+--    UART_Number, DMA_Req_Type, Stm32.Defines/FunctionalState
 --
 --*****
 
@@ -434,18 +435,18 @@ package Stm32.UART is
 --****f* Stm32.UART/DMA_Stream_Type
 --
 --  NAME
---    DMA_Stream_Type --
+--    DMA_Stream_Type -- Gives the stream of an uart for a specific request.
 --  SYNOPSIS
 --    stream := DMA_Stream(UART, Req);
 --  FUNCTION
---
+--    Gives the stream used by the given uart for the given request.
 --  INPUTS
 --    UART - The number of the uart, of type UART_Number.
---    Req  - of type DMA_Req_Type.
+--    Req  - The request type, of type DMA_Req_Type.
 --  RESULT
---    stream - of type DMA_Stream_Type
+--    stream - The stream of the DMA, of type DMA_Stream_Type
 --  SEE ALSO
---    UART_Number, Stm32.DMA/DMA_Req_Type, Stm32.DMA/DMA_Stream_Type
+--    UART_Number, DMA_Req_Type, Stm32.DMA/DMA_Stream_Type
 --
 --*****
 
@@ -455,15 +456,15 @@ package Stm32.UART is
 --****f* Stm32.UART/Data_Register_Address
 --
 --  NAME
---    Data_Register_Address --
+--    Data_Register_Address -- Gives the data register address of an uart.
 --  SYNOPSIS
 --    address := Data_Register_Address(UART);
 --  FUNCTION
---
+--    Gives the data register address of the given UART.
 --  INPUTS
---    UART - of type UART_Number
+--    UART - The uart number, of type UART_Number
 --  RESULT
---    address - of type System.Address.
+--    address - The address of the uart, of type System.Address.
 --  SEE ALSO
 --    UART_Number, System.Address
 --
