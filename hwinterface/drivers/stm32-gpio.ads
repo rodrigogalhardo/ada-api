@@ -422,7 +422,7 @@ package Stm32.GPIO is
 
   procedure Setup_Out_Pin (Pin : Pin_Type);
 
---****f* Stm32.GPIO/Setup_Out_Pin
+--****f* Stm32.GPIO/Read_Pin
 --
 --  NAME
 --    Read_Pin -- Read the value on the pin.
