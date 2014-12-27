@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../../robodoc.css" type="text/css" />
+<title>./hwinterface/drivers/stm32-uart.ads</title>
+<!-- Source: ./hwinterface/drivers/stm32-uart.ads -->
+<!-- Generated with ROBODoc Version 4.99.42 (Dec 12 2014) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../../robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="../../masterindex.html#top">Index</a>
+<a class="menuitem" href="../../robo_classes.html#top">Classes</a>
+<a class="menuitem" href="../../robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="../../robo_functions.html#top">Functions</a>
+<a class="menuitem" href="../../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="Stm322eUART2fAF5fUART"></a>
+<a name="robo133"></a><h2>Stm32.UART/AF_UART [ Definitions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>AF_UART</strong> -- An array representing the UART alternate functions.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This array gives the alternate function corresponding to an uart_number.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="./stm32-gpio_ads.html#robo21">Stm32.GPIO</a>/<a href="./stm32-gpio_ads.html#robo2">Alternate_Function</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fClear5fFlag"></a>
+<a name="robo134"></a><h2>Stm32.UART/Clear_Flag [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Clear_Flag</strong> -- Clear a uart flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Clear_Flag</strong>(UART, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Clear the given flag of the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart to use, of type <a href="#robo155">UART_Number</a>.
+    Flag - The flag to clear, of type <a href="#robo152">UART_Flag_Type</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo152">UART_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fClear5fInterrupt5fFlag"></a>
+<a name="robo135"></a><h2>Stm32.UART/Clear_Interrupt_Flag [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Clear_Interrupt_Flag</strong> -- Clear the flag of the interrupt linked to a flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Clear_Interrupt_Flag</strong>(UART, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Clear the flag of the interrupt linked to the given flag of the given
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The number of the UART, of type <a href="#robo155">UART_Number</a>
+    Flag - The flag of the interrupt to clear, of type <a href="#robo152">UART_Flag_Type</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo152">UART_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fConfigure5fInterrupt"></a>
+<a name="robo136"></a><h2>Stm32.UART/Configure_Interrupt [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Configure_Interrupt</strong> -- Configure an UART with an interrupt.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Configure_Interrupt</strong>(UART, Flag, State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Configure an interrupt to work (or not) with the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART  - The number of the UART to use, of type <a href="#robo155">UART_Number</a>.
+    Flag  - The flag on which the interrupt will react, of type <a href="#robo152">UART_Flag_Type</a>
+    State - Activate or desactivate the uart, of type <a href="./stm32-defines_ads.html#robo0">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo152">UART_Flag_Type</a>, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo0">FunctionalState</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fConfigure5fPins"></a>
+<a name="robo137"></a><h2>Stm32.UART/Configure_Pins [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    Configure_Pin -- Configure pins for uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Configure_Pin(UART, Tx, Rx, Tx_PP);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Configure the given pins to receive an uart communication.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART   - The number of the uart to initialize, of type <a href="#robo155">UART_Number</a>.
+    Tx     - The transmission pin, of type <a href="./stm32-gpio_ads.html#robo16">Pin_Type</a>.
+    Rx     - The reception pin, of type <a href="./stm32-gpio_ads.html#robo16">Pin_Type</a>.
+    Tx_PP  - A Boolean to indicate if the transmission pin is in Push/Pull,
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>,<a href="./stm32-gpio_ads.html#robo21">Stm32.GPIO</a>/<a href="./stm32-gpio_ads.html#robo16">Pin_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fData5fRegister5fAddress"></a>
+<a name="robo138"></a><h2>Stm32.UART/Data_Register_Address [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Data_Register_Address</strong> -- Gives the data register address of an uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    address := <strong>Data_Register_Address</strong>(UART);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gives the data register address of the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart number, of type <a href="#robo155">UART_Number</a>
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    address - The address of the uart, of type System.Address.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, System.Address
+</pre>
+
+<hr />
+<a name="Stm322eUART2fDMA5fChannel"></a>
+<a name="robo139"></a><h2>Stm32.UART/DMA_Channel [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Channel</strong> -- Gives the DMA channel of an uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    channel := <strong>DMA_Channel</strong>(UART);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gives the DMA channel of a given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The number of the UART, of type <a href="#robo155">UART_Number</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    channel - The DMA channel of the uart, of type DMA_Channel_Type
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, Stm32.DMA/DMA_Channel_Type
+</pre>
+
+<hr />
+<a name="Stm322eUART2fDMA5fReq5fType"></a>
+<a name="robo140"></a><h2>Stm32.UART/DMA_Req_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Req_Type</strong> -- Reception or transmission DMA.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Rx for a DMA in reception
+      * Tx for a DMA in transmission
+</pre>
+
+<hr />
+<a name="Stm322eUART2fDMA5fStream5fType"></a>
+<a name="robo141"></a><h2>Stm32.UART/DMA_Stream_Type [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Stream_Type</strong> -- Gives the stream of an uart for a specific request.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    stream := DMA_Stream(UART, Req);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gives the stream used by the given uart for the given request.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The number of the uart, of type <a href="#robo155">UART_Number</a>.
+    Req  - The request type, of type <a href="#robo140">DMA_Req_Type</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    stream - The stream of the DMA, of type <strong>DMA_Stream_Type</strong>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo140">DMA_Req_Type</a>, Stm32.DMA/<strong>DMA_Stream_Type</strong>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fFlow5fControl5fType"></a>
+<a name="robo142"></a><h2>Stm32.UART/Flow_Control_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Flow_Control_Type</strong> -- Kind of flow control.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between None if you want no control, RTS for a Ready To Send
+</pre>
+
+<hr />
+<a name="Stm322eUART2fGet5fFlag5fStatus"></a>
+<a name="robo143"></a><h2>Stm32.UART/Get_Flag_Status [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Get_Flag_Status</strong> -- Get the status of a flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    value := <strong>Get_Flag_Status</strong>(UART, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Get the state of the given flag for the given uart.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The UART to use, of type <a href="#robo155">UART_Number</a>.
+    Flag - The flag to get the status, of type <a href="#robo152">UART_Flag_Type</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    value - A Boolean representing the status of the flag.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo152">UART_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fGet5fInterrupt5fFlag5fStatus"></a>
+<a name="robo144"></a><h2>Stm32.UART/Get_Interrupt_Flag_Status [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Get_Interrupt_Flag_Status</strong> -- Get the status of the interruption of a flag
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    value := <strong>Get_Interrupt_Flag_Status</strong>(UART, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Get the status of the interruption linked to a flag, to know for example
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The number of the uart, of type <a href="#robo155">UART_Number</a>
+    Flag - The flag of the interrupt, of type <a href="#robo152">UART_Flag_Type</a>
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    value - A Boolean representing the status of the interrupt of a flag.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo152">UART_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fIRQ"></a>
+<a name="robo145"></a><h2>Stm32.UART/IRQ [ Definitions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>IRQ</strong> -- An array giving the interrupt corresponding to an uart.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This is an array of <a href="./stm32-nvic_ads.html#robo81">IRQn_Type</a>. It gives the interrupt corresponding to an
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="./stm32-nvic_ads.html#robo81">IRQn_Type</a>, <a href="#robo155">UART_Number</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fParity5fType"></a>
+<a name="robo146"></a><h2>Stm32.UART/Parity_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Parity_Type</strong> -- Indicates the bit of parity.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between No_Parity for no bit of parity, Odd_Parity for an odd bit of
+</pre>
+
+<hr />
+<a name="Stm322eUART2fReceive5fData"></a>
+<a name="robo147"></a><h2>Stm32.UART/Receive_Data [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Receive_Data</strong> -- Receive datas on the uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    value := <strong>Receive_Data</strong>(UART);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Receives datas of the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart on which the datas are received, of type <a href="#robo155">UART_Number</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    value - the datas received, of type Unsigned_16.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fSend5fData"></a>
+<a name="robo148"></a><h2>Stm32.UART/Send_Data [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Send_Data</strong> -- Send datas in the UART.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Send_Data</strong>(UART, Data);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Sends datas on the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart on which the datas are sent, of type <a href="#robo155">UART_Number</a>.
+    Data - The data to send, of type Unsigned_16.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fSetup5fDMA"></a>
+<a name="robo149"></a><h2>Stm32.UART/Setup_DMA [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Setup_DMA</strong> -- Controls the DMA requests activations.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Setup_DMA</strong>(UART, Req, State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Activate or desactivate the USART DMA request for the given UART and for
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART  - The Number of the UART, of type <a href="#robo155">UART_Number</a>
+    Req   - The request type, of type <a href="#robo140">DMA_Req_Type</a>
+    State - The state of the DMA, of type <a href="./stm32-defines_ads.html#robo0">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo140">DMA_Req_Type</a>, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo0">FunctionalState</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fStm322eUART"></a>
+<a name="robo150"></a><h2>Stm32.UART/Stm32.UART [ Classes ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Stm32.UART</strong> -- Manages UART for the stm.
+</pre>
+<p class="item_name">COPYRIGHT</p>
+<pre>    (c) 2014 by Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    with <strong>Stm32.UART</strong>;
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Manages UART for the stm32.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">USES</p>
+<pre>    Interfaces, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>, Stm32.DMA, <a href="./stm32-gpio_ads.html#robo21">Stm32.GPIO</a>, <a href="./stm32-nvic_ads.html#robo100">Stm32.NVIC</a>, System
+</pre>
+
+<hr />
+<a name="Stm322eUART2fStop5fType"></a>
+<a name="robo151"></a><h2>Stm32.UART/Stop_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Stop_Type</strong>
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between Stop_1 for a stop bit of length 1, Stop_0_5 for a length of
+</pre>
+
+<hr />
+<a name="Stm322eUART2fUART5fFlag5fType"></a>
+<a name="robo152"></a><h2>Stm32.UART/UART_Flag_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Flag_Type</strong> -- The uart flags.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * CTS : for the change of CTS
+      * LBD : LIN Break detection flag.
+      * TXE : Indicates that the send register is empty.
+      * TC  : Indicates that the transmission ended.
+      * RXNE: Indicates that datas have been received and are ready to be read.
+      * IDLE: Idle Line detection flag.
+      * ORE : OverRun Error flag.
+      * NE  : Noise Error flag.
+      * FE  : Framing Error flag.
+      * PE  : Parity Error flag.
+</pre>
+
+<hr />
+<a name="Stm322eUART2fUART5fInit"></a>
+<a name="robo153"></a><h2>Stm32.UART/UART_Init [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Init</strong> -- Initialize an uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>UART_Init</strong>(UART, Params);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Initialize the given uart with the given parameters.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART   - The uart number to initialize, of type <a href="#robo155">UART_Number</a>.
+    Params - The parameters of the uart, of type <a href="#robo156">UART_Params</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo155">UART_Number</a>, <a href="#robo156">UART_Params</a>
+</pre>
+
+<hr />
+<a name="Stm322eUART2fUART5fMode5fType"></a>
+<a name="robo154"></a><h2>Stm32.UART/UART_Mode_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Mode_Type</strong> -- The mode of the UART.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between Mode_None for no mode, Mode_Rx for reception mode, Mode_Tx
+</pre>
+
+<hr />
+<a name="Stm322eUART2fUART5fNumber"></a>
+<a name="robo155"></a><h2>Stm32.UART/UART_Number [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Number</strong> -- The number of the UART.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    An Integer between 1 and 6 (included) representing the number of the UART.
+</pre>
+
+<hr />
+<a name="Stm322eUART2fUART5fParams"></a>
+<a name="robo156"></a><h2>Stm32.UART/UART_Params [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Params</strong> -- A record representing the parameters of the UART module.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Define the following fields of the record :
+      * Baud_Rate   : The UART Baudrate, of type Unsigned_32.
+      * Word_Length : The length of the words, of type <a href="#robo157">Word_Length_Type</a>.
+      * Stop_Bit    : The length of the stop bit, of type <a href="#robo151">Stop_Type</a>.
+      * Parity      : The parity bit of the UART, of type <a href="#robo146">Parity_Type</a>.
+      * Mode        : The mode of the UART, of type <a href="#robo154">UART_Mode_Type</a>.
+      * Flow_Control: The flow control, of type <a href="#robo142">Flow_Control_Type</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo157">Word_Length_Type</a>, <a href="#robo151">Stop_Type</a>, <a href="#robo146">Parity_Type</a>, <a href="#robo154">UART_Mode_Type</a>,
+</pre>
+
+<hr />
+<a name="Stm322eUART2fWord5fLength5fType"></a>
+<a name="robo157"></a><h2>Stm32.UART/Word_Length_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo150">Stm32.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Word_Length_Type</strong> -- The length of an UART word.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between Length_8 and Length_9 for words if length 8 or 9.
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./hwinterface/drivers/stm32-uart.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Sun Dec 28 2014 00:49:41
+</p>
+</div> <!-- footer -->
+</body>
+</html>

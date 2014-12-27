@@ -12,3 +12,6 @@ doc :
 clean :
 	-rm objs/*
 	-rm bin/*
+
+clean-doc :
+	-rm -rf doc/
