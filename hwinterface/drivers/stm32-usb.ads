@@ -17,7 +17,51 @@
 --
 --------------------------------------------------------------------------------
 
+--****c* Stm32.USB/Stm32.USB
+--
+--  NAME
+--    Stm32.USB -- Manages USB communications.
+--  COPYRIGHT
+--    (c) 2014 by Julien Brette & Julien Romero
+--  SYNOPSIS
+--    with Stm32.USB;
+--  DESCRIPTION
+--    Manages USB communications. When included, the usb is initialize and ready
+--to be used.
+--  AUTHOR
+--    Julien Brette & Julien Romero
+--
+--*****
+
 package Stm32.USB is
+
+--****f* Stm32.USB/Read
+--
+--  NAME
+--    Read -- Read a caracter on the usb.
+--  SYNOPSIS
+--    C := Read;
+--  FUNCTION
+--    Read a caracter on the usb.
+--  RESULT
+--    C - The read caracter, of type Character.
+--
+--*****
+
   function Read return Character;
+
+--****f* Stm32.USB/Send
+--
+--  NAME
+--    Send -- Sends a string on the usb.
+--  SYNOPSIS
+--    Send(S);
+--  FUNCTION
+--    Sends a string on the usb.
+--  INPUTS
+--    S - The string to send, of type String.
+--
+--*****
+
   procedure Send (S : String);
 end Stm32.USB;
