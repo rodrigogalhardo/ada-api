@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../../robodoc.css" type="text/css" />
+<title>./hwinterface/drivers/stm32-i2c.ads</title>
+<!-- Source: ./hwinterface/drivers/stm32-i2c.ads -->
+<!-- Generated with ROBODoc Version 4.99.42 (Dec 12 2014) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../../robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="../../masterindex.html#top">Index</a>
+<a class="menuitem" href="../../robo_classes.html#top">Classes</a>
+<a class="menuitem" href="../../robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="../../robo_functions.html#top">Functions</a>
+<a class="menuitem" href="../../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="Stm322eI2C2fAF5fI2C"></a>
+<a name="robo47"></a><h2>Stm32.I2C/AF_I2C [ Definitions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>AF_I2C</strong> -- The array of alternate functions of the I2C.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This array makes the correspondance between an <a href="#robo62">I2C_Number</a> and an
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="./stm32-gpio_ads.html#robo26">Alternate_Function</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fCheck5fEvent"></a>
+<a name="robo48"></a><h2>Stm32.I2C/Check_Event [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Check_Event</strong> -- Checks the last I2C event.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>Check_Event</strong>(I2C, Event);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Checks whether the last I2C event is equal to the one passed as parameter.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The I2C number, of type <a href="#robo62">I2C_Number</a>.
+    Event - The event to check, of type <a href="#robo57">I2C_Event</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A Boolean saying if the one given was the last one.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo57">I2C_Event</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fClear5fFlag"></a>
+<a name="robo49"></a><h2>Stm32.I2C/Clear_Flag [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Clear_Flag</strong> -- Clears the I2C's pending flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Clear_Flag</strong>(I2C, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Clears the I2C's pending flag.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The I2C number, of type <a href="#robo62">I2C_Number</a>.
+    Flag - The flag to clear, of type <a href="#robo58">I2C_Flag_Type</a>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo58">I2C_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fConfigure5fPins"></a>
+<a name="robo50"></a><h2>Stm32.I2C/Configure_Pins [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Configure_Pins</strong> : Configures pins for an I2C communication.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Configure_Pins</strong>(I2C, SDA, SCL);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Configures the given pins for a I2C communication.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The I2C number, of type <a href="#robo62">I2C_Number</a>.
+    SDA - The SD1 pin, of type <a href="./stm32-gpio_ads.html#robo40">Pin_Type</a>.
+    SCL - The SCL pin, of type <a href="./stm32-gpio_ads.html#robo40">Pin_Type</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="./stm32-gpio_ads.html#robo40">Pin_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fData5fArray"></a>
+<a name="robo51"></a><h2>Stm32.I2C/Data_Array [ Definitions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Data_Array</strong> -- An array of datas.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This is an array of Unsigned_8 that will receive data transfered.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fGet5fFlag5fStatus"></a>
+<a name="robo52"></a><h2>Stm32.I2C/Get_Flag_Status [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Get_Flag_Status</strong> -- Checks whether the specified I2C flag is set or not.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>Get_Flag_Status</strong>(I2C, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Checks whether the specified I2C flag is set or not.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The number of the I2C peripheral, of type <a href="#robo62">I2C_Number</a>.
+    Flag - The flag to check, of type <a href="#robo58">I2C_Flag_Type</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A Boolean representing the new state of the flag.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo58">I2C_Flag_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fAck5fState"></a>
+<a name="robo53"></a><h2>Stm32.I2C/I2C_Ack_State [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Ack_State</strong> - Enables or disables the acknowledgement.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Disable : Disable the acknowledgement.
+      * Enable : Enable the ackowledgement.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fAcknowledged5fAddress"></a>
+<a name="robo54"></a><h2>Stm32.I2C/I2C_Acknowledged_Address [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Acknowledged_Address</strong> -- The length of address acknowledge.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Seven_Bits : 7-bits address is acknowledged.
+      * Ten_Bits : 10_bits address is acknowledged.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fDirection"></a>
+<a name="robo55"></a><h2>Stm32.I2C/I2C_Direction [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Direction</strong> -- The role of the I2C device.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Transmitter : The device is a transmitter.
+      * Receiver : The device is a receiver.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fDuty5fCycle"></a>
+<a name="robo56"></a><h2>Stm32.I2C/I2C_Duty_Cycle [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Duty_Cycle</strong> -- The I2C fast mode duty cycle.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Duty_Cycle_16_9 : I2C fast mode Tlow/Thigh = 16/9.
+      * Duty_Cycle_2 : I2C fast mode Tlow/Thigh = 2.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fEvent"></a>
+<a name="robo57"></a><h2>Stm32.I2C/I2C_Event [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Event</strong> -- An I2C event.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * SLAVE_STOP_DETECTED : STOPF flag
+      * SLAVE_ACK_FAILURE : AF flag
+      * SLAVE_RECEIVER_ADDRESS_MATCHED : BUSY and ADDR flags
+      * SLAVE_BYTE_RECEIVED : BUSY and RXNE flags
+      * MASTER_MODE_SELECT : BUSY, MSL and SB flags.
+      * MASTER_RECEIVER_MODE_SELECTED : BUSY,MSL and ADDR flags.
+      * MASTER_MODE_ADDRESS10 : BUSY, MSL and ADD10 flags.
+      * MASTER_BYTE_RECEIVED : BUSY, MSL and RXNE flags.
+      * SLAVE_BYTE_TRANSMITTING : TRA, BUSY and TXE flags
+      * SLAVE_TRANSMITTER_ADDRESS_MATCHED : TRA, BUSY, TXE, ADDR flags.
+      * SLAVE_BYTE_TRANSMITTED : TRA, BUSY, TXE and BTF flags.
+      * MASTER_BYTE_TRANSMITTING :TRA, BUSY, MSL and TXE flags.
+      * MASTER_TRANSMITTER_MODE_SELECTED : BUSY, MSL, ADDR, TXE and TRA flags.
+      * MASTER_BYTE_TRANSMITTED : TRA, BUSY, MSL, TXE and TRA flags.
+      * SLAVE_GENERALCALLADDRESS_MATCHED : GENCALL and BUSY flags.
+      * SLAVE_RECEIVER_SECONDADDRESS_MATCHED : DUALF and BUSY flags.
+      * SLAVE_TRANSMITTER_SECONDADDRESS_MATCHED : DUALF, TRA, BUSY and TXE
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fFlag5fType"></a>
+<a name="robo58"></a><h2>Stm32.I2C/I2C_Flag_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Flag_Type</strong> -- I2C flags.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * MSL : Master/Slave
+      * BUSY : Bus busy
+      * TRA : Transmitter/Receiver
+      * GENCALL : General Call header (slave mode)
+      * SMBDEFAULT : SMBus default header (slave mode)
+      * SMBHOST : SMBus host header (slave mode)
+      * DUALF : Dual flag (slave mode)
+      * SB : Start Bit
+      * ADDR : Address sent
+      * BTF : Byte transfer finished.
+      * ADD10 : 10-bits header sent
+      * STOPF : STOP detection
+      * RXNE : Data register not empty (receiver)
+      * TXE : Data register empty (trasmitter)
+      * BERR : Bus error.
+      * ARLO : Arbitration lost (master mode)
+      * AF : Acknoledgement failure.
+      * OVR : Overrun/Underrun flag (in slave mode)
+      * PECERR : PEC error in reception.
+      * TIMEOUT : Timeout or Tlow error
+      * SMBALERT : SMBus Alert
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fInit"></a>
+<a name="robo59"></a><h2>Stm32.I2C/I2C_Init [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Init</strong> -- Initializes I2C.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>I2C_Init</strong>(I2C, Params);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Initializes the I2C with the given parameters.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The number of the I2C, of type <a href="#robo62">I2C_Number</a>.
+    Params - The parameters of the I2C, of type <a href="#robo63">I2C_Params</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo63">I2C_Params</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fMode"></a>
+<a name="robo60"></a><h2>Stm32.I2C/I2C_Mode [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Mode</strong> -- The I2C mode.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * I2C
+      * SMBusDevice
+      * SMBusHost
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fNACK5fPosition"></a>
+<a name="robo61"></a><h2>Stm32.I2C/I2C_NACK_Position [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_NACK_Position</strong> -- Indicates the last received byte.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Next : The next byte will be the last.
+      * Current : The current byte is the last.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fNumber"></a>
+<a name="robo62"></a><h2>Stm32.I2C/I2C_Number [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Number</strong> -- The number of the I2C.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    An Integer between 1 and 3 (included).
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fParams"></a>
+<a name="robo63"></a><h2>Stm32.I2C/I2C_Params [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_Params</strong> -- I2C Parameters.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Define the following fields of the record :
+      * Clock_Speed : An Unsigned_32 that specifies the clock frequency. This
+      * Mode : The I2C mode, of type <a href="#robo60">I2C_Mode</a>.
+      * Duty_Cycle : I2C fast mode duty cycle, of type <a href="#robo56">I2C_Duty_Cycle</a>.
+      * Own_Address_1 : An Unsigned_16 that specifies the fist device own
+      * Ack : Enables or disables the acknowledgement, of type <a href="#robo53">I2C_Ack_State</a>.
+      * Ack_Address : Specifies if 7-bit or 10-bit address is acknowledged, of
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo60">I2C_Mode</a>, <a href="#robo56">I2C_Duty_Cycle</a>, <a href="#robo53">I2C_Ack_State</a>, <a href="#robo54">I2C_Acknowledged_Address</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fPEC5fPosition"></a>
+<a name="robo64"></a><h2>Stm32.I2C/I2C_PEC_Position [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_PEC_Position</strong> -- Indicates the PEC position.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Next : The next byte is PEC.
+      * Current : The current byte is PEC.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fI2C5fSMBus5fAlert5fPin5fLevel"></a>
+<a name="robo65"></a><h2>Stm32.I2C/I2C_SMBus_Alert_Pin_Level [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>I2C_SMBus_Alert_Pin_Level</strong> -- The SMBAlert pin level.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Low : SMBAlert pin driven low.
+      * High : SMBAlert pin driven high.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fRead"></a>
+<a name="robo66"></a><h2>Stm32.I2C/Read [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Read</strong> -- Reads datas from an I2C communication.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Read</strong>(I2C, Address, Data, Success);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Reads datas received during an I2C communication.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The I2C number, of type <a href="#robo62">I2C_Number</a>.
+    Address - The address of the slave to read from.
+    Data - The array of the received datas, of type out <a href="#robo51">Data_Array</a>.
+    Success - Says whether the transmission was a success or not.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo67">Slave_Address</a>, <a href="#robo51">Data_Array</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fSlave5fAddress"></a>
+<a name="robo67"></a><h2>Stm32.I2C/Slave_Address [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Slave_Address</strong> -- The address of a slave.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    An unsigned number on 7 bits.
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fStm322eI2C"></a>
+<a name="robo68"></a><h2>Stm32.I2C/Stm32.I2C [ Classes ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Stm32.I2C</strong> -- Package for I2C communications.
+</pre>
+<p class="item_name">COPYRIGHT</p>
+<pre>    (c) 2014 by Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    with <strong>Stm32.I2C</strong>;
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Thanks to this package, you can manage I2C communications.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">USES</p>
+<pre>    Interfaces, <a href="./stm32-gpio_ads.html#robo45">Stm32.GPIO</a>
+</pre>
+
+<hr />
+<a name="Stm322eI2C2fWrite"></a>
+<a name="robo69"></a><h2>Stm32.I2C/Write [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo68">Stm32.I2C</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Write</strong> -- Sends datas to a slave.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>Write</strong>(I2C, Address, Data);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Sends datas to the given slave.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    I2C - The I2C Number, of type <a href="#robo62">I2C_Number</a>.
+    Address - The slave address, of type <a href="#robo67">Slave_Address</a>.
+    Data - The array of the datas, of type <a href="#robo51">Data_Array</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A Boolean to know whether the transmission was a success or not.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo62">I2C_Number</a>, <a href="#robo67">Slave_Address</a>, <a href="#robo51">Data_Array</a>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./hwinterface/drivers/stm32-i2c.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Tue Dec 30 2014 00:31:21
+</p>
+</div> <!-- footer -->
+</body>
+</html>
