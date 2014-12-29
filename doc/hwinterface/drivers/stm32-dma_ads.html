@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../../robodoc.css" type="text/css" />
+<title>./hwinterface/drivers/stm32-dma.ads</title>
+<!-- Source: ./hwinterface/drivers/stm32-dma.ads -->
+<!-- Generated with ROBODoc Version 4.99.42 (Dec 12 2014) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../../robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="../../masterindex.html#top">Index</a>
+<a class="menuitem" href="../../robo_classes.html#top">Classes</a>
+<a class="menuitem" href="../../robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="../../robo_functions.html#top">Functions</a>
+<a class="menuitem" href="../../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="Stm322eDMA2fClear5fInterrupt5fFlag"></a>
+<a name="robo2"></a><h2>Stm32.DMA/Clear_Interrupt_Flag [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Clear_Interrupt_Flag</strong> -- Clear the flag of the interrupt.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Clear_Interrupt_Flag</strong>(DMA, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Clear the flag of the interrupt linked to the given flag.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>
+    Flag - The flag to clear, of type <a href="#robo8">DMA_Interrupt_Flag</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="#robo8">DMA_Interrupt_Flag</a>
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fConfigure5fDMA"></a>
+<a name="robo3"></a><h2>Stm32.DMA/Configure_DMA [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Configure_DMA</strong> -- Enables or disables a DMA stream.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Configure_DMA</strong>(DMA, State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Enables or disables a DMA stream.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+    State - The state of the stream, of type <a href="./stm32-defines_ads.html#robo0">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo0">FunctionalState</a>
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fConfigure5fInterrupt"></a>
+<a name="robo4"></a><h2>Stm32.DMA/Configure_Interrupt [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Configure_Interrupt</strong> -- Configures the interrupt for a stream.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Configure_Interrupt</strong>(DMA, Flag, State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Activates or desactivates an interrupt for a DMA stream.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+    Flag - The flag on which the interrupt triggers, of type
+    State - Enable or disable the interrupt, of type <a href="./stm32-defines_ads.html#robo0">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="#robo8">DMA_Interrupt_Flag</a>, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo0">FunctionalState</a>
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDir5fType"></a>
+<a name="robo5"></a><h2>Stm32.DMA/Dir_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Dir_Type</strong> -- The transfert mode of a DMA.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Peripheral_To_Memory : Peripheral to memory transfert.
+      * Memory_To_Peripheral : Memory to peripheral transfert.
+      * Memory_To_Memory : Memory to memory transfert.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fChannel5fType"></a>
+<a name="robo6"></a><h2>Stm32.DMA/DMA_Channel_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Channel_Type</strong> -- The channel of a DMA stream.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Channel_0 : For the channel 0 of a stream.
+      * Channel_1 : For the channel 1 of a stream.
+      * Channel_2 : For the channel 2 of a stream.
+      * Channel_3 : For the channel 3 of a stream.
+      * Channel_4 : For the channel 4 of a stream.
+      * Channel_5 : For the channel 5 of a stream.
+      * Channel_6 : For the channel 6 of a stream.
+      * Channel_7 : For the channel 7 of a stream.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fInit"></a>
+<a name="robo7"></a><h2>Stm32.DMA/DMA_Init [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Init</strong> -- Initializes a DMA stream.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>DMA_Init</strong>(DMA, Params);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Initializes the DMA stream with the given parameters.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+    Params - The parameters of the stream, of type <a href="#robo10">DMA_Params</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="#robo10">DMA_Params</a>
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fInterrupt5fFlag"></a>
+<a name="robo8"></a><h2>Stm32.DMA/DMA_Interrupt_Flag [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Interrupt_Flag</strong> -- The DMA interrupt flags.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Transfer_Error : When a transfer error occurs.
+      * Half_Transfer_Complete : When half the transfer is achieved.
+      * Transfer_Complete : When the transfert is totally achieved.
+      * FIFO_Error : When there is an error with the FIFO.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fMode5fType"></a>
+<a name="robo9"></a><h2>Stm32.DMA/DMA_Mode_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Mode_Type</strong> -- The transfert type of the DMA.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Normal : Once the dma has done the given transfert size, the stream is
+      * Circular : For a circular buffer and continious datas flows.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fParams"></a>
+<a name="robo10"></a><h2>Stm32.DMA/DMA_Params [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Params</strong> -- The parameters of a DMA.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Define the following fields of the record :
+      * Channel : The channel of the stream, of type <a href="#robo6">DMA_Channel_Type</a>.
+      * Peripheral_Base_Addr : The base address of the peripheral, of type
+      * Memory_Base_Addr : The base address of the memory, of type Address.
+      * Dir : The transfert mode, of type <a href="#robo5">Dir_Type</a>.
+      * Buffer_Size : An Unsigned_32 representing the size of the buffer.
+      * Peripheral_Inc : The kind of peripheral address increment, of type
+      * Memory_Inc : The kinf of memory address increment, of type
+      * Peripheral_Data_Size : The size of the peripheral datas, of type
+      * Memory_Data_Size : The size of the memory datas, of type
+      * Mode : The transfert type of the DMA, of type <a href="#robo9">DMA_Mode_Type</a>.
+      * Priority : The priority of a stream, of type <a href="#robo22">Priority_Type</a>.
+      * FIFO_Mode : Activation of the FIFO mode, of type <a href="#robo12">FIFO_Mode_Type</a>.
+      * FIFO_Threshold : The threshold of the fifo, of type <a href="#robo25">Threshold_Type</a>.
+      * Memory_Burst : The kind of memory burst, of type <a href="#robo16">Memory_Burst_Type</a>.
+      * Peripheral_Burst : The kind of peripheral burst, of type
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo6">DMA_Channel_Type</a>, Address, System/<a href="#robo5">Dir_Type</a>, <a href="#robo5">Dir_Type</a>, <a href="#robo21">Peripheral_Inc_Type</a>,
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fDMA5fStream5fType"></a>
+<a name="robo11"></a><h2>Stm32.DMA/DMA_Stream_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>DMA_Stream_Type</strong> -- Defines a stream.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This is a record with two fields :
+      * DMA : The DMA number, an Integer between 1 and 2 (included).
+      * Stream : The stream number, an Integer between 0 and 7 (included).
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fFIFO5fMode5fType"></a>
+<a name="robo12"></a><h2>Stm32.DMA/FIFO_Mode_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>FIFO_Mode_Type</strong> -- The FIFO Mode activation status.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Disable : disable the fifo mode.
+      * Enable : Enable the fifo mode.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fGet5fInterrupt5fFlag"></a>
+<a name="robo13"></a><h2>Stm32.DMA/Get_Interrupt_Flag [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Get_Interrupt_Flag</strong> -- Gets the status of the flag of an interrupt.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>Get_Interrupt_Flag</strong>(DMA, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>     Gets the status of the flag linked to an interrupt.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+    Flag - The flag to get, of type <a href="#robo8">DMA_Interrupt_Flag</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A Boolean representing the value of the flag.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="#robo8">DMA_Interrupt_Flag</a>
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fIRQ"></a>
+<a name="robo14"></a><h2>Stm32.DMA/IRQ [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>IRQ</strong> -- Gives the interrupt of a DMA stream.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    IRQn := <strong>IRQ</strong>(DMA);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gives the interrupt of a given DMA stream.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    IRQn - The interrupt, of type <a href="./stm32-nvic_ads.html#robo105">IRQn_Type</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, <a href="./stm32-nvic_ads.html#robo124">Stm32.NVIC</a>/<a href="./stm32-nvic_ads.html#robo105">IRQn_Type</a>.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fIs5fEnable"></a>
+<a name="robo15"></a><h2>Stm32.DMA/Is_Enable [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Is_Enable</strong> -- Says if the DMA stream is currently enabled.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>Is_Enable</strong>(DMA);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Says whether a DMA stream is enabled or not.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA stream, of type <a href="#robo11">DMA_Stream_Type</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A Boolean representing if the stream is enabled or not.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    DMA__Stream_Type
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fMemory5fBurst5fType"></a>
+<a name="robo16"></a><h2>Stm32.DMA/Memory_Burst_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Memory_Burst_Type</strong> -- Memory burst transfert.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    It must correspond to the FIFO threshold in FIFO mode. Choose between :
+      * Single : transfer of a single word, corresponds to 1/4 of the fifo.
+      * Inc_4 : transfer of two words, corresponds to 1/2 of the fifo.
+      * Inc_8 : transfer of three words, corresponds to 3/4 of the fifo.
+      * Inc_16 : transfer of four words, corresponds to the full fifo.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fMemory5fData5fSize5fType2e"></a>
+<a name="robo17"></a><h2>Stm32.DMA/Memory_Data_Size_Type. [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    Memory_Data_Size_Type -- Data width for memory.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Byte : 8bits datas.
+      * Half_Word : 16bits datas.
+      * Word : 32bits datas.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fMemory5fInc5fType"></a>
+<a name="robo18"></a><h2>Stm32.DMA/Memory_Inc_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Memory_Inc_Type</strong> -- Automatically increments the memory address after
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Disable : Disable the auto-increment.
+      * Enable : Enable the auto-increment.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fPeripheral5fBurst5fType"></a>
+<a name="robo19"></a><h2>Stm32.DMA/Peripheral_Burst_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Peripheral_Burst_Type</strong> -- Peripheral burst transfert.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    It must correspond to the FIFO threshold in FIFO mode. Choose between :
+      * Single : transfer of a single word, corresponds to 1/4 of the fifo.
+      * Inc_4 : transfer of two words, corresponds to 1/2 of the fifo.
+      * Inc_8 : transfer of three words, corresponds to 3/4 of the fifo.
+      * Inc_16 : transfer of four words, corresponds to the full fifo.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fPeripheral5fData5fSize5fType2e"></a>
+<a name="robo20"></a><h2>Stm32.DMA/Peripheral_Data_Size_Type. [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    Peripheral_Data_Size_Type -- Data width for a peripheral.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Byte : 8bits datas.
+      * Half_Word : 16bits datas.
+      * Word : 32bits datas.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fPeripheral5fInc5fType"></a>
+<a name="robo21"></a><h2>Stm32.DMA/Peripheral_Inc_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Peripheral_Inc_Type</strong> -- Automatically increments the peripheral address
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Disable : Disable the auto-increment.
+      * Enable : Enable the auto-increment.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fPriority5fType"></a>
+<a name="robo22"></a><h2>Stm32.DMA/Priority_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Priority_Type</strong> -- The priority of a stream.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Low : A low priority.
+      * Medium : A medium priority.
+      * High : A high priority.
+      * Very_High : A very high priority.
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fStart5fTransfer"></a>
+<a name="robo23"></a><h2>Stm32.DMA/Start_Transfer [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Start_Transfer</strong> - Start a DMA transfer.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Start_Transfer</strong>(DMA, Memory_Address, Size);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Start a transfer with the stream to a given address for a given size.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    DMA - The DMA Stream, of type <a href="#robo11">DMA_Stream_Type</a>
+    Memory_Address - The new destination address, of type Address.
+    Size - An Integer representing the new size of the buffer.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo11">DMA_Stream_Type</a>, System/Address
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fStm322eDMA"></a>
+<a name="robo24"></a><h2>Stm32.DMA/Stm32.DMA [ Classes ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Stm32.DMA</strong> -- Package to manage DMA tranfers.
+</pre>
+<p class="item_name">COPYRIGHT</p>
+<pre>    (c) 2014 by Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    with <strong>Stm32.DMA</strong>;
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Tools to use the DMA modules of the stm32.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">USES</p>
+<pre>    Interfaces, <a href="./stm32-defines_ads.html#robo1">Stm32.Defines</a>, <a href="./stm32-nvic_ads.html#robo124">Stm32.NVIC</a>, System
+</pre>
+
+<hr />
+<a name="Stm322eDMA2fThreshold5fType"></a>
+<a name="robo25"></a><h2>Stm32.DMA/Threshold_Type [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>     <strong>Threshold_Type</strong> -- The threshold level of a fifo.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * One_Quarter : A 1/4 fifo.
+      * Half : A 1/2 fifo.
+      * Three_Quarters : A 3/4 fifo.
+      * Full : A Full FIFO.
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./hwinterface/drivers/stm32-dma.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Mon Dec 29 2014 01:04:14
+</p>
+</div> <!-- footer -->
+</body>
+</html>
