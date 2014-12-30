@@ -18,27 +18,27 @@
 --------------------------------------------------------------------------------
 
 project Build is
-    for Source_Dirs use ("./","./hwinterface/drivers");
+    for Source_Dirs use ("./","./hwinterface/drivers", "./hwinterface/stm32");
     for Main use ("example");
     for Object_Dir use "./objs";
     for Exec_Dir use "./bin";
 
     package Builder is
-        for Default_Switches ("Ada") use ("--RTS=rts-raven-2011");                
+        for Default_Switches ("Ada") use ("--RTS=rts-raven-2011");
     end Builder;
 
     package Compiler is
         for Default_Switches ("Ada") use ("-O2", "-g", "-gnatyabefhiklpr", "-gnata",
-	                                  "-gnatwacefijklmopruvz", "-gnatVacdfimorst", "-gnato",
-			                  "-gnatA", "-gnat05", "-gnatE", "-gnatw.a", "-E",
-					  "-gnatw.X", "-fstack-usage");
+                                  "-gnatwacefijklmopruvz", "-gnatVacdfimorst", "-gnato",
+                                  "-gnatA", "-gnat05", "-gnatE", "-gnatw.a", "-E",
+                                  "-gnatw.X", "-fstack-usage");
     end Compiler;
 
     package Binder is
     end Binder;
 
-    package Linker is                                                                         
-        for Default_Switches ("Ada") use ("-g","-T", "hwinterface/drivers/kernel_samba.ld");                
+    package Linker is
+        for Default_Switches ("Ada") use ("-g","-T", "hwinterface/drivers/kernel_samba.ld");
     end Linker;
 
 end Build;

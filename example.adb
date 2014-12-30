@@ -18,21 +18,15 @@
 --------------------------------------------------------------------------------
 
 with Ada.Real_Time; use Ada.Real_Time;
-with Stm32.GPIO; use Stm32.GPIO;
-with Stm32.RCC; use Stm32.RCC;
-pragma Elaborate_All (Stm32.GPIO);
+with Stm32.Led; use Stm32.Led;
 
 procedure Example is
---Define the Pin
-  Pin : constant Pin_Type := (GPIOD, 12);
 begin
---Configure the pin as an output pin.
-   Setup_Out_Pin(Pin);
   loop
 --Turn on the pin, wait a bit, turn off the pin, wait a bit
-    Set_Pin(Pin,True);
+    Led_On(Led3);
     delay until Clock + To_Time_Span (1.0);
-    Set_Pin(Pin,False);
+    Led_Off(Led3);
     delay until Clock + To_Time_Span (1.0);
   end loop;
 end Example;

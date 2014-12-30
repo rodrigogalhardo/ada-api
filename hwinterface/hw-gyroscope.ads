@@ -22,9 +22,9 @@ with Interfaces; use Interfaces;
 package Hw.Gyroscope is
   type Gyroscope_Status is (Empty,Full );
   type Gyroscope_Data_3axis is record
-	X : Integer_16;
-	Y : Integer_16;
-	Z : Integer_16;
+    X : Integer_16;
+    Y : Integer_16;
+    Z : Integer_16;
   end record;
   function Get_Gyroscope_Status  return Gyroscope_Status;
    function Get_Gyroscope_Next_Data  return Gyroscope_Data_3axis;
