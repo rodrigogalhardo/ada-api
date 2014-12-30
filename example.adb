@@ -25,8 +25,14 @@ begin
   loop
 --Turn on the pin, wait a bit, turn off the pin, wait a bit
     Led_On(Led3);
+    Led_On(Led4);
+    Led_On(Led5);
+    Led_On(Led6);
     delay until Clock + To_Time_Span (1.0);
     Led_Off(Led3);
+    Led_Off(Led4);
+    Led_Off(Led5);
+    Led_Off(Led6);
     delay until Clock + To_Time_Span (1.0);
   end loop;
 end Example;
