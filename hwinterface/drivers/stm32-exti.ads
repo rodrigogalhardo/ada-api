@@ -1,4 +1,39 @@
+--------------------------------------------------------------------------------
+--
+--Copyright 2014 - Julien Romero
+--
+--This program is free software: you can redistribute it and/or modify
+--it under the terms of the GNU General Public License as published by
+--the Free Software Foundation, either version 3 of the License, or
+--(at your option) any later version.
+--
+--This program is distributed in the hope that it will be useful,
+--but WITHOUT ANY WARRANTY; without even the implied warranty of
+--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--GNU General Public License for more details.
+--
+--You should have received a copy of the GNU General Public License
+--along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--
+--------------------------------------------------------------------------------
+
 with Stm32.Defines; use Stm32.Defines;
+
+--****c* Stm32.EXTI/Stm32.EXTI
+--
+--  NAME
+--    Stm32.EXTI -- External Interrupt
+--  COPYRIGHT
+--    (c) 2014 by Julien Romero
+--  SYNOPSIS
+--    with Stm32.EXTI;
+--  DESCRIPTION
+--    Package for external interrupts.
+--  AUTHOR
+--    Julien Romero
+--  USES
+--    Stm32.Defines
+--*****
 
 package Stm32.EXTI is
 

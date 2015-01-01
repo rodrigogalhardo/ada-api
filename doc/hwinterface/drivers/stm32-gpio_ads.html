@@ -26,9 +26,9 @@
 <div id="content">
 <hr />
 <a name="Stm322eGPIO2fAlternate5fFunction"></a>
-<a name="robo65"></a><h2>Stm32.GPIO/Alternate_Function [ Types ]</h2>
+<a name="robo66"></a><h2>Stm32.GPIO/Alternate_Function [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Alternate_Function</strong> -- Describes the alternate functions.
 </pre>
@@ -78,9 +78,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fConfig5fGPIO"></a>
-<a name="robo66"></a><h2>Stm32.GPIO/Config_GPIO [ Functions ]</h2>
+<a name="robo67"></a><h2>Stm32.GPIO/Config_GPIO [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Config_GPIO</strong> -- Configure a GPIO
 </pre>
@@ -91,11 +91,11 @@
 <pre>    Configure the given GPIO with the given parameters.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    GPIO   - The GPIO to configure, of type <a href="#robo76">GPIO_Type</a>
-    Params - The parameters to apply to the GPIO, of type <a href="#robo72">GPIO_Params</a>
+<pre>    GPIO   - The GPIO to configure, of type <a href="#robo77">GPIO_Type</a>
+    Params - The parameters to apply to the GPIO, of type <a href="#robo73">GPIO_Params</a>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre>    Params : <a href="#robo72">GPIO_Params</a> := (Pins =&gt; (Mask =&gt; (1|3 =&gt; True, others =&gt; False)),
+<pre>    Params : <a href="#robo73">GPIO_Params</a> := (Pins =&gt; (Mask =&gt; (1|3 =&gt; True, others =&gt; False)),
     Mode        =&gt; Mode_In,
     Speed       =&gt; Speed_100MHz,
     Output_Type =&gt; PP,
@@ -103,14 +103,14 @@
     <strong>Config_GPIO</strong> (GPIOA, Params);
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo76">GPIO_Type</a>, <a href="#robo72">GPIO_Params</a>
+<pre>    <a href="#robo77">GPIO_Type</a>, <a href="#robo73">GPIO_Params</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fConfig5fGPIO5fAF"></a>
-<a name="robo67"></a><h2>Stm32.GPIO/Config_GPIO_AF [ Functions ]</h2>
+<a name="robo68"></a><h2>Stm32.GPIO/Config_GPIO_AF [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Config_GPIO_AF</strong> -- Configure a pin to an alternate mode
 </pre>
@@ -121,19 +121,19 @@
 <pre>    Configure the given pin to the given alternate function.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    GPIO    - the gpio of the pin being configured, of type <a href="#robo76">GPIO_Type</a>
-    Pin     - the number of the pin being configured, of type <a href="#robo78">Pin_Number</a>
-    AF      - the alternate function of the pin, of type <a href="#robo65">Alternate_Function</a>
+<pre>    GPIO    - the gpio of the pin being configured, of type <a href="#robo77">GPIO_Type</a>
+    Pin     - the number of the pin being configured, of type <a href="#robo79">Pin_Number</a>
+    AF      - the alternate function of the pin, of type <a href="#robo66">Alternate_Function</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo76">GPIO_Type</a>, <a href="#robo78">Pin_Number</a>, <a href="#robo65">Alternate_Function</a>
+<pre>    <a href="#robo77">GPIO_Type</a>, <a href="#robo79">Pin_Number</a>, <a href="#robo66">Alternate_Function</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fDeInit5fGPIO"></a>
-<a name="robo68"></a><h2>Stm32.GPIO/DeInit_GPIO [ Functions ]</h2>
+<a name="robo69"></a><h2>Stm32.GPIO/DeInit_GPIO [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>DeInit_GPIO</strong> -- Reset all parameters a a GPIO
 </pre>
@@ -143,17 +143,17 @@
     Put all the parameters of the given GPIO the their initial value.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    GPIO  - The GPIO to reset, of type <a href="#robo76">GPIO_Type</a>
+<pre>    GPIO  - The GPIO to reset, of type <a href="#robo77">GPIO_Type</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo76">GPIO_Type</a>
+<pre>    <a href="#robo77">GPIO_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fBit5fAction"></a>
-<a name="robo69"></a><h2>Stm32.GPIO/GPIO_Bit_Action [ Types ]</h2>
+<a name="robo70"></a><h2>Stm32.GPIO/GPIO_Bit_Action [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Bit_Action</strong> -- The action bit of a GPIO.
 </pre>
@@ -163,9 +163,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fMode"></a>
-<a name="robo70"></a><h2>Stm32.GPIO/GPIO_Mode [ Types ]</h2>
+<a name="robo71"></a><h2>Stm32.GPIO/GPIO_Mode [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Mode</strong> -- Mode of a GPIO.
 </pre>
@@ -175,9 +175,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fOutput5fType"></a>
-<a name="robo71"></a><h2>Stm32.GPIO/GPIO_Output_Type [ Types ]</h2>
+<a name="robo72"></a><h2>Stm32.GPIO/GPIO_Output_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Output_Type</strong> -- The type of an output GPIO.
 </pre>
@@ -187,19 +187,19 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fParams"></a>
-<a name="robo72"></a><h2>Stm32.GPIO/GPIO_Params [ Types ]</h2>
+<a name="robo73"></a><h2>Stm32.GPIO/GPIO_Params [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Params</strong> -- The parameters of a GPIO.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
-      * Pins        of type  <a href="#robo73">GPIO_Pins</a>        , by default (Mask =&gt; (others =&gt; False));
-      * Mode        of type  <a href="#robo70">GPIO_Mode</a>        , by default Mode_In;
-      * Speed       of type  <a href="#robo75">GPIO_Speed</a>       , by default Speed_2MHz;
-      * Output_Type of type  <a href="#robo71">GPIO_Output_Type</a> , by default PP;
-      * PuPd        of type  <a href="#robo74">GPIO_PuPd</a>        , by default No_Pull;
+      * Pins        of type  <a href="#robo74">GPIO_Pins</a>        , by default (Mask =&gt; (others =&gt; False));
+      * Mode        of type  <a href="#robo71">GPIO_Mode</a>        , by default Mode_In;
+      * Speed       of type  <a href="#robo76">GPIO_Speed</a>       , by default Speed_2MHz;
+      * Output_Type of type  <a href="#robo72">GPIO_Output_Type</a> , by default PP;
+      * PuPd        of type  <a href="#robo75">GPIO_PuPd</a>        , by default No_Pull;
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre>    <strong>GPIO_Params</strong> := (Pins        =&gt; (Mask =&gt; (1|3 =&gt; True, others =&gt; False)),
@@ -209,19 +209,19 @@
                    PuPd        =&gt; Pull_Up);
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo73">GPIO_Pins</a>, <a href="#robo70">GPIO_Mode</a>, <a href="#robo75">GPIO_Speed</a>, <a href="#robo71">GPIO_Output_Type</a>, <a href="#robo74">GPIO_PuPd</a>
+<pre>    <a href="#robo74">GPIO_Pins</a>, <a href="#robo71">GPIO_Mode</a>, <a href="#robo76">GPIO_Speed</a>, <a href="#robo72">GPIO_Output_Type</a>, <a href="#robo75">GPIO_PuPd</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fPins"></a>
-<a name="robo73"></a><h2>Stm32.GPIO/GPIO_Pins [ Types ]</h2>
+<a name="robo74"></a><h2>Stm32.GPIO/GPIO_Pins [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Pins</strong> -- A record containing the mask of the pins.
 </pre>
 <p class="item_name">USAGE</p>
-<pre>    Define Mask in the record with a <a href="#robo77">Pin_Mask</a>.
+<pre>    Define Mask in the record with a <a href="#robo78">Pin_Mask</a>.
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre>    Pins : <strong>GPIO_Pins</strong> := (Mask =&gt; (others =&gt; False));
@@ -229,9 +229,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fPuPd"></a>
-<a name="robo74"></a><h2>Stm32.GPIO/GPIO_PuPd [ Types ]</h2>
+<a name="robo75"></a><h2>Stm32.GPIO/GPIO_PuPd [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_PuPd</strong> -- The pull of a GPIO.
 </pre>
@@ -241,9 +241,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fSpeed"></a>
-<a name="robo75"></a><h2>Stm32.GPIO/GPIO_Speed [ Types ]</h2>
+<a name="robo76"></a><h2>Stm32.GPIO/GPIO_Speed [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Speed</strong> -- The speed of a GPIO.
 </pre>
@@ -253,9 +253,9 @@
 
 <hr />
 <a name="Stm322eGPIO2fGPIO5fType"></a>
-<a name="robo76"></a><h2>Stm32.GPIO/GPIO_Type [ Types ]</h2>
+<a name="robo77"></a><h2>Stm32.GPIO/GPIO_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GPIO_Type</strong> -- Names of the GPIOs.
 </pre>
@@ -263,14 +263,14 @@
 <pre>    Choose between GPIOA, GPIOB,..., GPIOI.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./stm32-rcc_ads.html#robo217">Stm32.RCC</a>/<a href="./stm32-rcc_ads.html#robo212">AHB1_Periph</a>
+<pre>    <a href="./stm32-rcc_ads.html#robo218">Stm32.RCC</a>/<a href="./stm32-rcc_ads.html#robo213">AHB1_Periph</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fPin5fMask"></a>
-<a name="robo77"></a><h2>Stm32.GPIO/Pin_Mask [ Types ]</h2>
+<a name="robo78"></a><h2>Stm32.GPIO/Pin_Mask [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Pin_Mask</strong> -- Define a mask for the pins.
 </pre>
@@ -278,14 +278,14 @@
 <pre>    An array of size 16 (0..15) of Booleans used to indicate which pins are used.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo73">GPIO_Pins</a>
+<pre>    <a href="#robo74">GPIO_Pins</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fPin5fNumber"></a>
-<a name="robo78"></a><h2>Stm32.GPIO/Pin_Number [ Types ]</h2>
+<a name="robo79"></a><h2>Stm32.GPIO/Pin_Number [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Pin_Number</strong> -- The number of the used Pin.
 </pre>
@@ -295,50 +295,50 @@
 
 <hr />
 <a name="Stm322eGPIO2fPin5fType"></a>
-<a name="robo79"></a><h2>Stm32.GPIO/Pin_Type [ Types ]</h2>
+<a name="robo80"></a><h2>Stm32.GPIO/Pin_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Pin_Type</strong> -- Describes a type
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    A record composed of two fields :
-      * Port of type <a href="#robo76">GPIO_Type</a> : the GPIO port
-      * Pin of type <a href="#robo78">Pin_Number</a> : the number of the pin
+      * Port of type <a href="#robo77">GPIO_Type</a> : the GPIO port
+      * Pin of type <a href="#robo79">Pin_Number</a> : the number of the pin
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo76">GPIO_Type</a>, <a href="#robo78">Pin_Number</a>
+<pre>    <a href="#robo77">GPIO_Type</a>, <a href="#robo79">Pin_Number</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fRead5fPin"></a>
-<a name="robo80"></a><h2>Stm32.GPIO/Read_Pin [ Functions ]</h2>
+<a name="robo81"></a><h2>Stm32.GPIO/Read_Pin [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>Read_Pin</strong> -- <a href="./stm32-i2c_ads.html#robo105">Read</a> the value on the pin.
+<pre>    <strong>Read_Pin</strong> -- <a href="./stm32-i2c_ads.html#robo106">Read</a> the value on the pin.
 </pre>
 <p class="item_name">SYNOPSIS</p>
 <pre>    value := <strong>Read_Pin</strong> (Pin);
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    <a href="./stm32-i2c_ads.html#robo105">Read</a> the logical value received on the given pin.
+<pre>    <a href="./stm32-i2c_ads.html#robo106">Read</a> the logical value received on the given pin.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Pin   - The pin to read, of type <a href="#robo79">Pin_Type</a>
+<pre>    Pin   - The pin to read, of type <a href="#robo80">Pin_Type</a>
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    value - A Boolean representing the value of the pin.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo79">Pin_Type</a>
+<pre>    <a href="#robo80">Pin_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fSet5fPin"></a>
-<a name="robo81"></a><h2>Stm32.GPIO/Set_Pin [ Functions ]</h2>
+<a name="robo82"></a><h2>Stm32.GPIO/Set_Pin [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Set_Pin</strong> -- Set the value of a pin.
 </pre>
@@ -349,18 +349,18 @@
 <pre>    Set the logical value of a pin to the given value.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Pin     - The pin to write, of type <a href="#robo79">Pin_Type</a>
+<pre>    Pin     - The pin to write, of type <a href="#robo80">Pin_Type</a>
     Value   - The value to set, of type Boolean
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo79">Pin_Type</a>
+<pre>    <a href="#robo80">Pin_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fSetup5fIn5fPin"></a>
-<a name="robo82"></a><h2>Stm32.GPIO/Setup_In_Pin [ Functions ]</h2>
+<a name="robo83"></a><h2>Stm32.GPIO/Setup_In_Pin [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Setup_In_Pin</strong> -- Setup a pin in input mode.
 </pre>
@@ -371,17 +371,17 @@
 <pre>    Configure the given pin in input mode. By default, the speed is 100MHz, the pin is in push/pull mode and in pull-up.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Pin   - The pin to configure, of type <a href="#robo79">Pin_Type</a>
+<pre>    Pin   - The pin to configure, of type <a href="#robo80">Pin_Type</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo79">Pin_Type</a>
+<pre>    <a href="#robo80">Pin_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fSetup5fOut5fPin"></a>
-<a name="robo83"></a><h2>Stm32.GPIO/Setup_Out_Pin [ Functions ]</h2>
+<a name="robo84"></a><h2>Stm32.GPIO/Setup_Out_Pin [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Setup_Out_Pin</strong> -- Setup a pin in output mode
 </pre>
@@ -392,15 +392,15 @@
 <pre>    Configure the given pin in input mode. By default, the speed is 100MHz, the pin is in push/pull mode and in pull-up.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Pin   - The pin to configure, of type <a href="#robo79">Pin_Type</a>
+<pre>    Pin   - The pin to configure, of type <a href="#robo80">Pin_Type</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo79">Pin_Type</a>
+<pre>    <a href="#robo80">Pin_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fStm322eGPIO"></a>
-<a name="robo84"></a><h2>Stm32.GPIO/Stm32.GPIO [ Classes ]</h2>
+<a name="robo85"></a><h2>Stm32.GPIO/Stm32.GPIO [ Classes ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
 <p class="item_name">NAME</p>
@@ -419,14 +419,14 @@
 <pre>    Julien Brette &amp; Julien Romero
 </pre>
 <p class="item_name">USES</p>
-<pre>    <a href="./stm32-rcc_ads.html#robo217">Stm32.RCC</a>
+<pre>    <a href="./stm32-rcc_ads.html#robo218">Stm32.RCC</a>
 </pre>
 
 <hr />
 <a name="Stm322eGPIO2fToggle5fPin"></a>
-<a name="robo85"></a><h2>Stm32.GPIO/Toggle_Pin [ Functions ]</h2>
+<a name="robo86"></a><h2>Stm32.GPIO/Toggle_Pin [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo84">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo85">Stm32.GPIO</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Toggle_Pin</strong> -- Toggle the value of a pin
 </pre>
@@ -437,15 +437,15 @@
 <pre>    Toggle the value of the given pin.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Pin   - The pin to toggle, of type <a href="#robo79">Pin_Type</a>
+<pre>    Pin   - The pin to toggle, of type <a href="#robo80">Pin_Type</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo79">Pin_Type</a>
+<pre>    <a href="#robo80">Pin_Type</a>
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-gpio.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 20:54:36
+<p>Generated from ./hwinterface/drivers/stm32-gpio.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
 </p>
 </div> <!-- footer -->
 </body>

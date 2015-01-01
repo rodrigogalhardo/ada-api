@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../../robodoc.css" type="text/css" />
+<title>./hwinterface/drivers/stm32-syscfg.ads</title>
+<!-- Source: ./hwinterface/drivers/stm32-syscfg.ads -->
+<!-- Generated with ROBODoc Version 4.99.42 (Dec 12 2014) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../../robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="../../masterindex.html#top">Index</a>
+<a class="menuitem" href="../../robo_classes.html#top">Classes</a>
+<a class="menuitem" href="../../robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="../../robo_functions.html#top">Functions</a>
+<a class="menuitem" href="../../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="Stm322eSYSCFG2fConfig5fEXTILine"></a>
+<a name="robo220"></a><h2>Stm32.SYSCFG/Config_EXTILine [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Config_EXTILine</strong> -- Configures an EXTI line with a source.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Config_EXTILine</strong>(Pin);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Configures an EXTI line with the given source.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    Pin - The pin source, of type <a href="#robo222">EXTI_Source</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo222">EXTI_Source</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fETH5fMediaInterface"></a>
+<a name="robo221"></a><h2>Stm32.SYSCFG/ETH_MediaInterface [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ETH_MediaInterface</strong> -- The Ethernet media interface.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * MII : MII mode
+      * RMII : RMII mode
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fEXTI5fSource"></a>
+<a name="robo222"></a><h2>Stm32.SYSCFG/EXTI_Source [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>EXTI_Source</strong> -- The complete pin name or the source.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Define the fields of the following record :
+      * Port : The port name, of type <a href="#robo225">Port_Source</a>.
+      * Pin : The pin number, of type <a href="#robo224">Pin_Source</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo225">Port_Source</a>, <a href="#robo224">Pin_Source</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fMemoryRemap"></a>
+<a name="robo223"></a><h2>Stm32.SYSCFG/MemoryRemap [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>MemoryRemap</strong> -- Mapping of a pin.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * Flash : Main Flash memory mapped at 0x00000000.
+      * SystemFlash : System Flash memory mapped at 0x00000000.
+      * SRAM : Embedded SRAM (112kB) mapped at 0x00000000.
+      * SDRAM :  FMC (External SDRAM) mapped at 0x00000000 for
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fPin5fSource"></a>
+<a name="robo224"></a><h2>Stm32.SYSCFG/Pin_Source [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Pin_Source</strong> -- The pin number of the source.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * PinSource0
+      * PinSource1
+      * PinSource2
+      * PinSource3
+      * PinSource4
+      * PinSource5
+      * PinSource6
+      * PinSource7
+      * PinSource8
+      * PinSource9
+      * PinSource10
+      * PinSource11
+      * PinSource12
+      * PinSource13
+      * PinSource14
+      * PinSource15
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fPort5fSource"></a>
+<a name="robo225"></a><h2>Stm32.SYSCFG/Port_Source [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Port_Source</strong> -- The GPIO source port.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * SYSCFG_GPIOA
+      * SYSCFG_GPIOB
+      * SYSCFG_GPIOC
+      * SYSCFG_GPIOD
+      * SYSCFG_GPIOE
+      * SYSCFG_GPIOF
+      * SYSCFG_GPIOG
+      * SYSCFG_GPIOH
+      * SYSCFG_GPIOI
+      * SYSCFG_GPIOJ
+      * SYSCFG_GPIOK
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fStm322eSYSCFG"></a>
+<a name="robo226"></a><h2>Stm32.SYSCFG/Stm32.SYSCFG [ Classes ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    SYSCFG -- SYSCFG package.
+</pre>
+<p class="item_name">COPYRIGHT</p>
+<pre>    (c) 2014 by Julien Romero
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    with <strong>Stm32.SYSCFG</strong>;
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    A package for the SYSCFG peripheral.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Julien Romero
+</pre>
+<p class="item_name">USES</p>
+<pre>    <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fCompensationCellCmd"></a>
+<a name="robo227"></a><h2>Stm32.SYSCFG/SYSCFG_CompensationCellCmd [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_CompensationCellCmd</strong> -- Activation of I/O Compensation.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>SYSCFG_CompensationCellCmd</strong>(New_State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Activates or desactivates the Input/Output compensation.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    New_State - Status of the compensation, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fDeInit"></a>
+<a name="robo228"></a><h2>Stm32.SYSCFG/SYSCFG_DeInit [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_DeInit</strong> -- Resets the SYSCFG parameters.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>SYSCFG_DeInit</strong>;
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Resets the SYSCFG parameters.
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fETH5fMediaInterfaceConfig"></a>
+<a name="robo229"></a><h2>Stm32.SYSCFG/SYSCFG_ETH_MediaInterfaceConfig [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_ETH_MediaInterfaceConfig</strong> -- Configures ethernet media interface.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>SYSCFG_ETH_MediaInterfaceConfig</strong>(ETH);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Configures ethernet media interface.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    ETH : The ethernet media interface, of type <a href="#robo221">ETH_MediaInterface</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo221">ETH_MediaInterface</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fGetCompensationCellStatus"></a>
+<a name="robo230"></a><h2>Stm32.SYSCFG/SYSCFG_GetCompensationCellStatus [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_GetCompensationCellStatus</strong> -- Gets the compensation cell ready flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>SYSCFG_GetCompensationCellStatus</strong>;
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gets the compensation cell ready flag status.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Value - A boolean representing if the ready flag is set or not.
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fMemoryRemapConfig"></a>
+<a name="robo231"></a><h2>Stm32.SYSCFG/SYSCFG_MemoryRemapConfig [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_MemoryRemapConfig</strong> -- Changes the mapping of a pin.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>SYSCFG_MemoryRemapConfig</strong>(Map);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Changes the mapping of a pin.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    Map - The new map, of type <a href="#robo223">MemoryRemap</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo223">MemoryRemap</a>
+</pre>
+
+<hr />
+<a name="Stm322eSYSCFG2fSYSCFG5fMemorySwappingBank"></a>
+<a name="robo232"></a><h2>Stm32.SYSCFG/SYSCFG_MemorySwappingBank [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo226">Stm32.SYSCFG</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>SYSCFG_MemorySwappingBank</strong> -- Enables or disables the Interal FLASH Bank
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>SYSCFG_MemorySwappingBank</strong>(State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Enables or disables the Interal FLASH Bank Swapping.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    State - New status of the Internal Flash Bank, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./hwinterface/drivers/stm32-syscfg.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+</p>
+</div> <!-- footer -->
+</body>
+</html>
