@@ -66,10 +66,41 @@ package Stm32.EXTI is
     EXTI_Line22 => 16#00400000#);
   for EXTI_Line'Size use 32;
 
+--****t* Stm32.EXTI/EXTI_Number
+--
+--  NAME
+--    EXTI_Number -- The number of a EXTI line.
+--  USAGE
+--    An Integer between 0 and 22 (included).
+--
+--*****
+
   type EXTI_Number is new Integer range 0 .. 22;
+
+--****t* Stm32.EXTI/EXTI_Mask
+--
+--  NAME
+--    EXTI_Mask -- The EXTI lines mask.
+--  USAGE
+--    An array of Boolean indexed by EXTI_Number.
+--  SEE ALSO
+--    EXTI_Number
+--
+--*****
 
   type EXTI_Mask is array (EXTI_Number) of Boolean;
   pragma Pack (EXTI_Mask);
+
+--****t* Stm32.EXTI/EXTI_Lines
+--
+--  NAME
+--    EXTI_Line -- The actual mask of EXTI lines.
+--  USAGE
+--    A record with a field, Mask of type EXTI_Mask.
+--  SEE ALSO
+--    EXTI_Mask
+--
+--*****
 
   type EXTI_Lines is record
     Mask : EXTI_Mask;
@@ -79,17 +110,54 @@ package Stm32.EXTI is
   end record;
   for EXTI_Lines'Size use 32;
 
+--****t* Stm32.EXTI/EXTI_Mode
+--
+--  NAME
+--    EXTI_Mode -- The mode of the EXTI.
+--  USAGE
+--    Choose between :
+--      * Mode_Interrupt : For interrupts.
+--      * Mode_Event : For events.
+--
+--*****
+
   type EXTI_Mode is (Mode_Interrupt, Mode_Event);
   for EXTI_Mode use
     (Mode_Interrupt => 16#00#,
      Mode_Event     => 16#04#);
 
+--****t* Stm32.EXTI/EXTI_Trigger
+--
+--  NAME
+--    EXTI_Trigger -- The event that triggers an interrupt.
+--  USAGE
+--    Choose between :
+--      * Rising : A rising trigger.
+--      * Falling : A falling trigger.
+--      * Rising_Falling : Both rising and falling trigger.
+--
+--*****
 
   type EXTI_Trigger is (Rising, Falling, Rising_Falling);
   for EXTI_Trigger use
     (Rising         => 16#08#,
      Falling        => 16#0C#,
      Rising_Falling => 16#10#);
+
+--****t* Stm32.EXTI/EXTI_Params
+--
+--  NAME
+--    EXTI_Params -- The parameters of the EXTI.
+--  USAGE
+--    Define the following field of this record :
+--      * EXTI : The mask of the lines, of type EXTI_Lines.
+--      * Mode : The mode of the EXTI, of type EXTI_Mode.
+--      * Trigger : The trigger event of the EXTI, of type EXTI_Trigger.
+--      * LineCmd : Activation of the EXTI, of type FunctionalState.
+--  SEE ALSO
+--    EXTI_Lines, EXTI_Mode, EXTI_Trigger, Stm32.Defines/FunctionalState
+--
+--*****
 
   type EXTI_Params is record
     EXTI : EXTI_Lines := (Mask => (others => False));
@@ -216,6 +284,7 @@ package Stm32.EXTI is
 --    Params - The EXTI parameters, of type EXTI_Params
 --  SEE ALSO
 --    EXTI_Params
+--*****
 
   procedure Config_EXTI (Params : EXTI_Params);
 
