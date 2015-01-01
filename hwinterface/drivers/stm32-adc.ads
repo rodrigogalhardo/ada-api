@@ -108,8 +108,7 @@ package Stm32.ADC is
 --****t* Stm32.ADC/External_Trigger_Source_Type
 --
 --  NAME
---    External_Trigger_Source_Type -- The external event used to trigger the
---start of conversion of a regular group.
+--    External_Trigger_Source_Type -- The external event used to trigger the start of conversion of a regular group.
 --  USAGE
 --    Choose between :
 --      * T1_CC1 : Timer 1 channel 1 signal
@@ -171,8 +170,7 @@ package Stm32.ADC is
 --****t* Stm32.ADC/Nbr_Of_Conversion_Type
 --
 --  NAME
---    Nbr_Of_Conversion_Type -- Number of ADC conversion that will be done using
---the sequencer for regular channel group.
+--    Nbr_Of_Conversion_Type -- Number of ADC conversion that will be done using the sequencer for regular channel group.
 --  USAGE
 --    An Integer between 1 and 8 included.
 --
@@ -256,8 +254,7 @@ package Stm32.ADC is
 --      * Disable : Disable DMA
 --      * Mode_1 : A Half-word transfered for each DMA request.
 --      * Mode_2 : Two half-words transfered for each DMA request.
---      * Mode_3 : A half-word transfered for each DMA request but composed of
---two differents conversions.
+--      * Mode_3 : A half-word transfered for each DMA request but composed of two differents conversions.
 --
 --*****
 
@@ -371,21 +368,14 @@ package Stm32.ADC is
 --  USAGE
 --    Define the following fields of the record :
 --      * Resolution : The resolution of the conversion, of type Resolution_Type
---      * Scan_Conv_Mode : Whether the conversion is performed in Scan
---(multichannels) or Single (one channel) mode, of type FunctionalState.
---      * Continuous_Conv_Mode : Continuous or Single mode, of type
---FunctionalState.
---      * External_Trig_Conv_Edge : Select external trigger edge, of type
---External_Trigger_Edge_Type.
---      * External_Trig_Conv : The event used to trigger, of type
---External_Trigger_Source_Type.
+--      * Scan_Conv_Mode : Whether the conversion is performed in Scan (multichannels) or Single (one channel) mode, of type FunctionalState.
+--      * Continuous_Conv_Mode : Continuous or Single mode, of type FunctionalState.
+--      * External_Trig_Conv_Edge : Select external trigger edge, of type External_Trigger_Edge_Type.
+--      * External_Trig_Conv : The event used to trigger, of type External_Trigger_Source_Type.
 --      * Data_Align : The align of the data, of type Data_Align_Type.
---      * Nbr_Of_Conversion : The number of conversions, of type
---Nbr_Of_Conversion_Type.
+--      * Nbr_Of_Conversion : The number of conversions, of type Nbr_Of_Conversion_Type.
 --  SEE ALSO
---    Resolution_Type, Stm32.Defines/FunctionalState,
---External_Trigger_Edge_Type, External_Trigger_Source_Type, Data_Align_Type,
---Nbr_Of_Conversion_Type
+--    Resolution_Type, Stm32.Defines/FunctionalState, External_Trigger_Edge_Type, External_Trigger_Source_Type, Data_Align_Type, Nbr_Of_Conversion_Type
 --
 --*****
 
@@ -408,8 +398,7 @@ package Stm32.ADC is
 --      * Mode : The mode of the ADC, Mode_Type.
 --      * Prescaler : The clock divider, of type Prescaler_Type.
 --      * DMA_Access_Mode : The DMA access mode, of type DMA_Mode_Type.
---      * Two_Sampling_Delay : The delay between two samplings, of type
---Two_Sampling_Delay_Type.
+--      * Two_Sampling_Delay : The delay between two samplings, of type Two_Sampling_Delay_Type.
 --  SEE ALSO
 --    Mode_Type, Prescaler_Type, DMA_Mode_Type, Two_Sampling_Delay_Type
 --
@@ -500,8 +489,7 @@ package Stm32.ADC is
 --  SYNOPSIS
 --    Regular_Channel_Config(ADC, Channel, Rank, Sample_Time);
 --  FUNCTION
---    Configures an ADC regular channel with its rank in the sequencer and
---its sample time.
+--    Configures an ADC regular channel with its rank in the sequencer and its sample time.
 --  INPUTS
 --    ADC - The ADC number, of type ADC_Number.
 --    Channel - The channel to configure, of type ADC_Channel_Number.

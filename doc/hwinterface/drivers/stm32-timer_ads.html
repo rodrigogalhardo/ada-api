@@ -33,7 +33,7 @@
 <pre>    <strong>AF_Timer</strong> -- An array to find the alternate function of a timer.
 </pre>
 <p class="item_name">USAGE</p>
-<pre>    This is an array that makes the correspondance between a timer number and
+<pre>    This is an array that makes the correspondance between a timer number and an alternate function. The value are <a href="./stm32-gpio_ads.html#robo66">Alternate_Function</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo259">Timer_Number</a>, <a href="./stm32-gpio_ads.html#robo85">Stm32.GPIO</a>/<a href="./stm32-gpio_ads.html#robo66">Alternate_Function</a>
@@ -55,7 +55,7 @@
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    Timer - The number of the timer, of type <a href="#robo259">Timer_Number</a>.
-    Interrupt - The souce of the interrupt to clear, of type
+    Interrupt - The souce of the interrupt to clear, of type <a href="#robo258">Timer_Interrupt_Source</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo259">Timer_Number</a>, <a href="#robo258">Timer_Interrupt_Source</a>
@@ -133,9 +133,9 @@
 <pre>    Choose a counter mode between :
       * Up : Counts increasingly.
       * Down : Counts decreasingly.
-      * CenterAligned1 : Center aligned 1 mode (Up/Down counting) : update
-      * CenterAligned2 : Center aligned 2 mode (Up/Down counting) : update
-      * CenterAligned3 : Center aligned 3 mode (Up/Down counting) : update
+      * CenterAligned1 : Center aligned 1 mode (Up/Down counting) : update interrupt flag when counts down
+      * CenterAligned2 : Center aligned 2 mode (Up/Down counting) : update interrupt flag when counts up
+      * CenterAligned3 : Center aligned 3 mode (Up/Down counting) : update interrupt flag when counts up and down.
 </pre>
 
 <hr />
@@ -203,7 +203,7 @@
 <pre>    <strong>Init_Timer</strong>(Timer, Params, Interrupt, Priority);
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Initialize a timer with the given parameters, with a choosen interrupt
+<pre>    Initialize a timer with the given parameters, with a choosen interrupt source and a given priority.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    Timer  - The timer to initialize, of type <a href="#robo259">Timer_Number</a>.
@@ -212,7 +212,7 @@
     Priority - The priority of the interrupt, of type <a href="./stm32-nvic_ads.html#robo167">IRQ_Priority</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo259">Timer_Number</a>, <a href="#robo260">Timer_Params</a>, <a href="#robo258">Timer_Interrupt_Source</a>,
+<pre>    <a href="#robo259">Timer_Number</a>, <a href="#robo260">Timer_Params</a>, <a href="#robo258">Timer_Interrupt_Source</a>, <a href="./stm32-nvic_ads.html#robo187">Stm32.NVIC</a>/<a href="./stm32-nvic_ads.html#robo167">IRQ_Priority</a>
 </pre>
 
 <hr />
@@ -224,7 +224,7 @@
 <pre>    <strong>IRQ_Timer</strong> -- An array to find the interrupt of a timer.
 </pre>
 <p class="item_name">USAGE</p>
-<pre>    This is an array of <a href="./stm32-nvic_ads.html#robo168">IRQn_Type</a> that makes the correspondance between a
+<pre>    This is an array of <a href="./stm32-nvic_ads.html#robo168">IRQn_Type</a> that makes the correspondance between a timer number and an interrupt.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo259">Timer_Number</a>, <a href="./stm32-nvic_ads.html#robo187">Stm32.NVIC</a>/<a href="./stm32-nvic_ads.html#robo168">IRQn_Type</a>
@@ -258,8 +258,8 @@
       * Active : Set the output high when counter is equal to compare value.
       * Inactive : Set the output low when counter is equal to compare value.
       * Toggle : Toggle the output when counter is equal to compare value.
-      * PWM1 : PWM mode 1. In up-counting, the channel is active as long as
-      * PWM2 : PWM mode 2. In up-counting, the channel is inactive as long as
+      * PWM1 : PWM mode 1. In up-counting, the channel is active as long as the counter is less than the compare value, otherwise it is inactive. In down-counting, the channel is inactive as long as the counter is more than the compare value, otherwise it is active.
+      * PWM2 : PWM mode 2. In up-counting, the channel is inactive as long as the counter is less than the compare value, otherwise it is active. In down-counting, the channel is active as long as the counter is more than the compare value, otherwise it is inactive.
 </pre>
 
 <hr />
@@ -342,17 +342,17 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of this record :
-      * Mode : The mode of the output channel,of type <a href="#robo245">OC_Mode</a>, Timing by 
-      * Output_State : Complementary Output state, of type <a href="#robo250">OC_State_Type</a>,
-      * Output_N_State : Complementary Output N state, of type
-      * Pulse : An Unsigned_32 representing the pulse length in the one pulse
-      * Polarity : Polarity of a complementary output, of type
-      * N_Polarity : Polarity of a complementary output N, of type 
-      * Idle_State : Idle state of the complementary output, of type
-      * N_Idle_State : Idle state of the complementary output N,of type
+      * Mode : The mode of the output channel,of type <a href="#robo245">OC_Mode</a>, Timing by default.
+      * Output_State : Complementary Output state, of type <a href="#robo250">OC_State_Type</a>, Disable by default.
+      * Output_N_State : Complementary Output N state, of type <a href="#robo248">OC_N_State_Type</a>, Disable by default.
+      * Pulse : An Unsigned_32 representing the pulse length in the one pulse mode, 0 by default.
+      * Polarity : Polarity of a complementary output, of type <a href="#robo249">OC_Polarity_Type</a>, High by default.
+      * N_Polarity : Polarity of a complementary output N, of type <a href="#robo247">OC_N_Polarity_Type</a>, High by default.
+      * Idle_State : Idle state of the complementary output, of type <a href="#robo244">OC_Idle_State</a>, Reset by default.
+      * N_Idle_State : Idle state of the complementary output N,of type <a href="#robo246">OC_N_Idle_State</a>, Reset by default.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo245">OC_Mode</a>, <a href="#robo250">OC_State_Type</a>, <a href="#robo248">OC_N_State_Type</a>, <a href="#robo249">OC_Polarity_Type</a>,
+<pre>    <a href="#robo245">OC_Mode</a>, <a href="#robo250">OC_State_Type</a>, <a href="#robo248">OC_N_State_Type</a>, <a href="#robo249">OC_Polarity_Type</a>, <a href="#robo247">OC_N_Polarity_Type</a>, <a href="#robo244">OC_Idle_State</a>, <a href="#robo246">OC_N_Idle_State</a>
 </pre>
 
 <hr />
@@ -529,7 +529,7 @@
       * Counter_Mode : The counter mode of the timer, of type Counter_Mode.
       * Period : An Unsigned_32 representing the period of the counter.
       * Clock_Division : The clock division, of type <a href="#robo235">Clock_Division_Type</a>.
-      * Repetition_Counter : An Unsigned_8 configuring the repetition counter
+      * Repetition_Counter : An Unsigned_8 configuring the repetition counter (only available on the TIM1).
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo238">Counter_Mode_Type</a>, <a href="#robo235">Clock_Division_Type</a>
@@ -537,7 +537,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-timer.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+<p>Generated from ./hwinterface/drivers/stm32-timer.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 00:20:59
 </p>
 </div> <!-- footer -->
 </body>

@@ -42,8 +42,7 @@ package Stm32.NVIC is
 --  NAME
 --    IRQn_Type -- The number of this interrupt.
 --  USAGE
---    It is the same than Interrupt_ID in the Ada.Interrupts package, a number
---which represents the interrupt.
+--    It is the same than Interrupt_ID in the Ada.Interrupts package, a number which represents the interrupt.
 --  SEE ALSO
 --    Ada.Interrupts/Interrupt_ID
 --

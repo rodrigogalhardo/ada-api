@@ -60,7 +60,7 @@ package Stm32.UART is
 --    AF_UART -- An array representing the UART alternate functions.
 --  USAGE
 --    This array gives the alternate function corresponding to an uart_number.
---It is an array of Alternate_Function and its index is an UART_Number.
+--  It is an array of Alternate_Function and its index is an UART_Number.
 --  SEE ALSO
 --    Stm32.GPIO/Alternate_Function
 --
@@ -90,7 +90,7 @@ package Stm32.UART is
 --    Stop_Type
 --  USAGE
 --    Choose between Stop_1 for a stop bit of length 1, Stop_0_5 for a length of
---0.5, Stop_2 for a length of 2 and Stop_1_5 for a length of 1.5.
+--  0.5, Stop_2 for a length of 2 and Stop_1_5 for a length of 1.5.
 --
 --*****
 
@@ -108,7 +108,7 @@ package Stm32.UART is
 --    Parity_Type -- Indicates the bit of parity.
 --  USAGE
 --    Choose between No_Parity for no bit of parity, Odd_Parity for an odd bit of
---parity and Even_Parity for an even bit of parity.
+--  parity and Even_Parity for an even bit of parity.
 --
 --*****
 
@@ -125,7 +125,7 @@ package Stm32.UART is
 --    UART_Mode_Type -- The mode of the UART.
 --  USAGE
 --    Choose between Mode_None for no mode, Mode_Rx for reception mode, Mode_Tx
---for transmission mode and Mode_Both for both reception and transmission mode.
+--  for transmission mode and Mode_Both for both reception and transmission mode.
 --
 --*****
 
@@ -143,7 +143,7 @@ package Stm32.UART is
 --    Flow_Control_Type -- Kind of flow control.
 --  USAGE
 --    Choose between None if you want no control, RTS for a Ready To Send
---control, CTS for a Clear To Send control and RTS_CTS for both of them.
+--  control, CTS for a Clear To Send control and RTS_CTS for both of them.
 --
 --*****
 
@@ -219,8 +219,7 @@ package Stm32.UART is
 --      * Mode        : The mode of the UART, of type UART_Mode_Type.
 --      * Flow_Control: The flow control, of type Flow_Control_Type.
 --  SEE ALSO
---    Word_Length_Type, Stop_Type, Parity_Type, UART_Mode_Type,
---Flow_Control_Type
+--    Word_Length_Type, Stop_Type, Parity_Type, UART_Mode_Type, Flow_Control_Type
 --
 --*****
 
@@ -239,7 +238,7 @@ package Stm32.UART is
 --    IRQ -- An array giving the interrupt corresponding to an uart.
 --  USAGE
 --    This is an array of IRQn_Type. It gives the interrupt corresponding to an
---uart (in index), of type UART_Number.
+--  uart (in index), of type UART_Number.
 --  SEE ALSO
 --    IRQn_Type, UART_Number
 --
@@ -281,7 +280,7 @@ package Stm32.UART is
 --    Tx     - The transmission pin, of type Pin_Type.
 --    Rx     - The reception pin, of type Pin_Type.
 --    Tx_PP  - A Boolean to indicate if the transmission pin is in Push/Pull,
---False by default.
+--  False by default.
 --  SEE ALSO
 --    UART_Number,Stm32.GPIO/Pin_Type
 --
@@ -358,7 +357,7 @@ package Stm32.UART is
 --    value := Get_Interrupt_Flag_Status(UART, Flag);
 --  FUNCTION
 --    Get the status of the interruption linked to a flag, to know for example
---if this flag called the interrupt.
+--  if this flag called the interrupt.
 --  INPUTS
 --    UART - The number of the uart, of type UART_Number
 --    Flag - The flag of the interrupt, of type UART_Flag_Type
@@ -380,7 +379,7 @@ package Stm32.UART is
 --    Clear_Interrupt_Flag(UART, Flag);
 --  FUNCTION
 --    Clear the flag of the interrupt linked to the given flag of the given
---uart.
+--  uart.
 --  INPUTS
 --    UART - The number of the UART, of type UART_Number
 --    Flag - The flag of the interrupt to clear, of type UART_Flag_Type.
@@ -400,7 +399,7 @@ package Stm32.UART is
 --    Setup_DMA(UART, Req, State);
 --  FUNCTION
 --    Activate or desactivate the USART DMA request for the given UART and for
---the given request type.
+--  the given request type.
 --  INPUTS
 --    UART  - The Number of the UART, of type UART_Number
 --    Req   - The request type, of type DMA_Req_Type

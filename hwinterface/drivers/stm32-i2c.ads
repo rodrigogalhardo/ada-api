@@ -350,15 +350,12 @@ package Stm32.I2C is
 --    I2C_Params -- I2C Parameters.
 --  USAGE
 --    Define the following fields of the record :
---      * Clock_Speed : An Unsigned_32 that specifies the clock frequency. This
---parameter must be set to a value lower than 400kHz.
+--      * Clock_Speed : An Unsigned_32 that specifies the clock frequency. This parameter must be set to a value lower than 400kHz.
 --      * Mode : The I2C mode, of type I2C_Mode.
 --      * Duty_Cycle : I2C fast mode duty cycle, of type I2C_Duty_Cycle.
---      * Own_Address_1 : An Unsigned_16 that specifies the fist device own
---address. This parameter can be a 7-bit or 10-bit address.
+--      * Own_Address_1 : An Unsigned_16 that specifies the fist device own address. This parameter can be a 7-bit or 10-bit address.
 --      * Ack : Enables or disables the acknowledgement, of type I2C_Ack_State.
---      * Ack_Address : Specifies if 7-bit or 10-bit address is acknowledged, of
---type I2C_Acknowledgement_Address.
+--      * Ack_Address : Specifies if 7-bit or 10-bit address is acknowledged, of type I2C_Acknowledgement_Address.
 --  SEE ALSO
 --    I2C_Mode, I2C_Duty_Cycle, I2C_Ack_State, I2C_Acknowledged_Address
 --

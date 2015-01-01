@@ -111,8 +111,7 @@ package Stm32.DMA is
 --****t* Stm32.DMA/Peripheral_Inc_Type
 --
 --  NAME
---    Peripheral_Inc_Type -- Automatically increments the peripheral address
---after transfert.
+--    Peripheral_Inc_Type -- Automatically increments the peripheral address after transfert.
 --  USAGE
 --    Choose between :
 --      * Disable : Disable the auto-increment.
@@ -129,8 +128,7 @@ package Stm32.DMA is
 --****t* Stm32.DMA/Memory_Inc_Type
 --
 --  NAME
---    Memory_Inc_Type -- Automatically increments the memory address after
---transfert.
+--    Memory_Inc_Type -- Automatically increments the memory address after transfert.
 --  USAGE
 --    Choose between :
 --      * Disable : Disable the auto-increment.
@@ -188,8 +186,7 @@ package Stm32.DMA is
 --    DMA_Mode_Type -- The transfert type of the DMA.
 --  USAGE
 --    Choose between :
---      * Normal : Once the dma has done the given transfert size, the stream is
---disabled.
+--      * Normal : Once the dma has done the given transfert size, the stream is disabled.
 --      * Circular : For a circular buffer and continious datas flows.
 --
 --*****
@@ -330,31 +327,22 @@ package Stm32.DMA is
 --  USAGE
 --    Define the following fields of the record :
 --      * Channel : The channel of the stream, of type DMA_Channel_Type.
---      * Peripheral_Base_Addr : The base address of the peripheral, of type
---Address.
+--      * Peripheral_Base_Addr : The base address of the peripheral, of type Address.
 --      * Memory_Base_Addr : The base address of the memory, of type Address.
 --      * Dir : The transfert mode, of type Dir_Type.
 --      * Buffer_Size : An Unsigned_32 representing the size of the buffer.
---      * Peripheral_Inc : The kind of peripheral address increment, of type
---Peripheral_Inc_Type.
---      * Memory_Inc : The kinf of memory address increment, of type
---Peripheral_Inc_Type.
---      * Peripheral_Data_Size : The size of the peripheral datas, of type
---Peripheral_Data_Size_Type.
---      * Memory_Data_Size : The size of the memory datas, of type
---Memory_Data_Size_Type.
+--      * Peripheral_Inc : The kind of peripheral address increment, of type Peripheral_Inc_Type.
+--      * Memory_Inc : The kinf of memory address increment, of type Peripheral_Inc_Type.
+--      * Peripheral_Data_Size : The size of the peripheral datas, of type Peripheral_Data_Size_Type.
+--      * Memory_Data_Size : The size of the memory datas, of type Memory_Data_Size_Type.
 --      * Mode : The transfert type of the DMA, of type DMA_Mode_Type.
 --      * Priority : The priority of a stream, of type Priority_Type.
 --      * FIFO_Mode : Activation of the FIFO mode, of type FIFO_Mode_Type.
 --      * FIFO_Threshold : The threshold of the fifo, of type Threshold_Type.
 --      * Memory_Burst : The kind of memory burst, of type Memory_Burst_Type.
---      * Peripheral_Burst : The kind of peripheral burst, of type
---Peripheral_Burst_Type.
+--      * Peripheral_Burst : The kind of peripheral burst, of type Peripheral_Burst_Type.
 --  SEE ALSO
---    DMA_Channel_Type, Address, System/Dir_Type, Dir_Type, Peripheral_Inc_Type,
---Memory_Inc_Type, Peripheral_Data_Size_Type, Memory_Data_Size_Type,
---DMA_Mode_Type, Priority_Type, FIFO_Mode_Type, Threshold_Type,
---Memory_Burst_Type, Peripheral_Burst_Type
+--    DMA_Channel_Type, Address, System/Dir_Type, Dir_Type, Peripheral_Inc_Type, Memory_Inc_Type, Peripheral_Data_Size_Type, Memory_Data_Size_Type, DMA_Mode_Type, Priority_Type, FIFO_Mode_Type, Threshold_Type, Memory_Burst_Type, Peripheral_Burst_Type
 --
 --*****
 
@@ -481,8 +469,7 @@ package Stm32.DMA is
 --    Activates or desactivates an interrupt for a DMA stream.
 --  INPUTS
 --    DMA - The DMA stream, of type DMA_Stream_Type.
---    Flag - The flag on which the interrupt triggers, of type
---DMA_Interrupt_Flag.
+--    Flag - The flag on which the interrupt triggers, of type DMA_Interrupt_Flag.
 --    State - Enable or disable the interrupt, of type FunctionalState.
 --  SEE ALSO
 --    DMA_Stream_Type, DMA_Interrupt_Flag, Stm32.Defines/FunctionalState
@@ -501,7 +488,7 @@ package Stm32.DMA is
 --  SYNOPSIS
 --    Value := Get_Interrupt_Flag(DMA, Flag);
 --  FUNCTION
---     Gets the status of the flag linked to an interrupt.
+--    Gets the status of the flag linked to an interrupt.
 --  INPUTS
 --    DMA - The DMA stream, of type DMA_Stream_Type.
 --    Flag - The flag to get, of type DMA_Interrupt_Flag.

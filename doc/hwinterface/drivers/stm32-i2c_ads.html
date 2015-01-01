@@ -337,12 +337,12 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
-      * Clock_Speed : An Unsigned_32 that specifies the clock frequency. This
+      * Clock_Speed : An Unsigned_32 that specifies the clock frequency. This parameter must be set to a value lower than 400kHz.
       * Mode : The I2C mode, of type <a href="#robo100">I2C_Mode</a>.
       * Duty_Cycle : I2C fast mode duty cycle, of type <a href="#robo96">I2C_Duty_Cycle</a>.
-      * Own_Address_1 : An Unsigned_16 that specifies the fist device own
+      * Own_Address_1 : An Unsigned_16 that specifies the fist device own address. This parameter can be a 7-bit or 10-bit address.
       * Ack : Enables or disables the acknowledgement, of type <a href="#robo93">I2C_Ack_State</a>.
-      * Ack_Address : Specifies if 7-bit or 10-bit address is acknowledged, of
+      * Ack_Address : Specifies if 7-bit or 10-bit address is acknowledged, of type I2C_Acknowledgement_Address.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo100">I2C_Mode</a>, <a href="#robo96">I2C_Duty_Cycle</a>, <a href="#robo93">I2C_Ack_State</a>, <a href="#robo94">I2C_Acknowledged_Address</a>
@@ -464,7 +464,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-i2c.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+<p>Generated from ./hwinterface/drivers/stm32-i2c.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 00:20:59
 </p>
 </div> <!-- footer -->
 </body>

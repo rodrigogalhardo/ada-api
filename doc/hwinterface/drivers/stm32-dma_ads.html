@@ -84,7 +84,7 @@
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    DMA - The DMA stream, of type <a href="#robo36">DMA_Stream_Type</a>.
-    Flag - The flag on which the interrupt triggers, of type
+    Flag - The flag on which the interrupt triggers, of type <a href="#robo33">DMA_Interrupt_Flag</a>.
     State - Enable or disable the interrupt, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -174,7 +174,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between :
-      * Normal : Once the dma has done the given transfert size, the stream is
+      * Normal : Once the dma has done the given transfert size, the stream is disabled.
       * Circular : For a circular buffer and continious datas flows.
 </pre>
 
@@ -189,23 +189,23 @@
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
       * Channel : The channel of the stream, of type <a href="#robo31">DMA_Channel_Type</a>.
-      * Peripheral_Base_Addr : The base address of the peripheral, of type
+      * Peripheral_Base_Addr : The base address of the peripheral, of type Address.
       * Memory_Base_Addr : The base address of the memory, of type Address.
       * Dir : The transfert mode, of type <a href="#robo30">Dir_Type</a>.
       * Buffer_Size : An Unsigned_32 representing the size of the buffer.
-      * Peripheral_Inc : The kind of peripheral address increment, of type
-      * Memory_Inc : The kinf of memory address increment, of type
-      * Peripheral_Data_Size : The size of the peripheral datas, of type
-      * Memory_Data_Size : The size of the memory datas, of type
+      * Peripheral_Inc : The kind of peripheral address increment, of type <a href="#robo46">Peripheral_Inc_Type</a>.
+      * Memory_Inc : The kinf of memory address increment, of type <a href="#robo46">Peripheral_Inc_Type</a>.
+      * Peripheral_Data_Size : The size of the peripheral datas, of type Peripheral_Data_Size_Type.
+      * Memory_Data_Size : The size of the memory datas, of type Memory_Data_Size_Type.
       * Mode : The transfert type of the DMA, of type <a href="./stm32-adc_ads.html#robo11">DMA_Mode_Type</a>.
       * Priority : The priority of a stream, of type <a href="#robo47">Priority_Type</a>.
       * FIFO_Mode : Activation of the FIFO mode, of type <a href="#robo37">FIFO_Mode_Type</a>.
       * FIFO_Threshold : The threshold of the fifo, of type <a href="#robo50">Threshold_Type</a>.
       * Memory_Burst : The kind of memory burst, of type <a href="#robo41">Memory_Burst_Type</a>.
-      * Peripheral_Burst : The kind of peripheral burst, of type
+      * Peripheral_Burst : The kind of peripheral burst, of type <a href="#robo44">Peripheral_Burst_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo31">DMA_Channel_Type</a>, Address, System/<a href="#robo30">Dir_Type</a>, <a href="#robo30">Dir_Type</a>, <a href="#robo46">Peripheral_Inc_Type</a>,
+<pre>    <a href="#robo31">DMA_Channel_Type</a>, Address, System/<a href="#robo30">Dir_Type</a>, <a href="#robo30">Dir_Type</a>, <a href="#robo46">Peripheral_Inc_Type</a>, <a href="#robo43">Memory_Inc_Type</a>, Peripheral_Data_Size_Type, Memory_Data_Size_Type, <a href="./stm32-adc_ads.html#robo11">DMA_Mode_Type</a>, <a href="#robo47">Priority_Type</a>, <a href="#robo37">FIFO_Mode_Type</a>, <a href="#robo50">Threshold_Type</a>, <a href="#robo41">Memory_Burst_Type</a>, <a href="#robo44">Peripheral_Burst_Type</a>
 </pre>
 
 <hr />
@@ -248,7 +248,7 @@
 <pre>    Value := <strong>Get_Interrupt_Flag</strong>(DMA, Flag);
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>     Gets the status of the flag linked to an interrupt.
+<pre>    Gets the status of the flag linked to an interrupt.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    DMA - The DMA stream, of type <a href="#robo36">DMA_Stream_Type</a>.
@@ -346,7 +346,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo49">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>Memory_Inc_Type</strong> -- Automatically increments the memory address after
+<pre>    <strong>Memory_Inc_Type</strong> -- Automatically increments the memory address after transfert.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between :
@@ -391,7 +391,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo49">Stm32.DMA</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>Peripheral_Inc_Type</strong> -- Automatically increments the peripheral address
+<pre>    <strong>Peripheral_Inc_Type</strong> -- Automatically increments the peripheral address after transfert.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between :
@@ -480,7 +480,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-dma.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+<p>Generated from ./hwinterface/drivers/stm32-dma.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 00:20:59
 </p>
 </div> <!-- footer -->
 </body>

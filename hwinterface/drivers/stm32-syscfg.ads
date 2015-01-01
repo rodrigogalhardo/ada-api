@@ -64,7 +64,7 @@ package Stm32.SYSCFG is
 --      * SystemFlash : System Flash memory mapped at 0x00000000.
 --      * SRAM : Embedded SRAM (112kB) mapped at 0x00000000.
 --      * SDRAM :  FMC (External SDRAM) mapped at 0x00000000 for
---STM32F42xxx/43xxx devices.
+--  STM32F42xxx/43xxx devices.
 --
 --*****
 
@@ -307,7 +307,7 @@ package Stm32.SYSCFG is
 --
 --  NAME
 --    SYSCFG_MemorySwappingBank -- Enables or disables the Interal FLASH Bank
---Swapping.
+--  Swapping.
 --  SYNOPSIS
 --    SYSCFG_MemorySwappingBank(State);
 --  FUNCTION

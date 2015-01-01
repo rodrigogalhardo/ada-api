@@ -67,8 +67,7 @@ package Stm32.Timer is
 --  NAME
 --    AF_Timer -- An array to find the alternate function of a timer.
 --  USAGE
---    This is an array that makes the correspondance between a timer number and
---an alternate function. The value are Alternate_Function.
+--    This is an array that makes the correspondance between a timer number and an alternate function. The value are Alternate_Function.
 --  SEE ALSO
 --    Timer_Number, Stm32.GPIO/Alternate_Function
 --
@@ -85,8 +84,7 @@ package Stm32.Timer is
 --  NAME
 --    IRQ_Timer -- An array to find the interrupt of a timer.
 --  USAGE
---    This is an array of IRQn_Type that makes the correspondance between a
---timer number and an interrupt.
+--    This is an array of IRQn_Type that makes the correspondance between a timer number and an interrupt.
 --  SEE ALSO
 --    Timer_Number, Stm32.NVIC/IRQn_Type
 --
@@ -106,12 +104,9 @@ package Stm32.Timer is
 --    Choose a counter mode between :
 --      * Up : Counts increasingly.
 --      * Down : Counts decreasingly.
---      * CenterAligned1 : Center aligned 1 mode (Up/Down counting) : update
---interrupt flag when counts down
---      * CenterAligned2 : Center aligned 2 mode (Up/Down counting) : update
---interrupt flag when counts up
---      * CenterAligned3 : Center aligned 3 mode (Up/Down counting) : update
---interrupt flag when counts up and down.
+--      * CenterAligned1 : Center aligned 1 mode (Up/Down counting) : update interrupt flag when counts down
+--      * CenterAligned2 : Center aligned 2 mode (Up/Down counting) : update interrupt flag when counts up
+--      * CenterAligned3 : Center aligned 3 mode (Up/Down counting) : update interrupt flag when counts up and down.
 --
 --*****
 
@@ -149,8 +144,7 @@ package Stm32.Timer is
 --      * Counter_Mode : The counter mode of the timer, of type Counter_Mode.
 --      * Period : An Unsigned_32 representing the period of the counter.
 --      * Clock_Division : The clock division, of type Clock_Division_Type.
---      * Repetition_Counter : An Unsigned_8 configuring the repetition counter
---(only available on the TIM1).
+--      * Repetition_Counter : An Unsigned_8 configuring the repetition counter (only available on the TIM1).
 --  SEE ALSO
 --    Counter_Mode_Type, Clock_Division_Type
 --
@@ -246,14 +240,8 @@ package Stm32.Timer is
 --      * Active : Set the output high when counter is equal to compare value.
 --      * Inactive : Set the output low when counter is equal to compare value.
 --      * Toggle : Toggle the output when counter is equal to compare value.
---      * PWM1 : PWM mode 1. In up-counting, the channel is active as long as
---the counter is less than the compare value, otherwise it is inactive. In
---down-counting, the channel is inactive as long as the counter is more than the
---compare value, otherwise it is active.
---      * PWM2 : PWM mode 2. In up-counting, the channel is inactive as long as
---the counter is less than the compare value, otherwise it is active. In
---down-counting, the channel is active as long as the counter is more than the
---compare value, otherwise it is inactive.
+--      * PWM1 : PWM mode 1. In up-counting, the channel is active as long as the counter is less than the compare value, otherwise it is inactive. In down-counting, the channel is inactive as long as the counter is more than the compare value, otherwise it is active.
+--      * PWM2 : PWM mode 2. In up-counting, the channel is inactive as long as the counter is less than the compare value, otherwise it is active. In down-counting, the channel is active as long as the counter is more than the compare value, otherwise it is inactive.
 --
 --*****
 
@@ -362,25 +350,16 @@ package Stm32.Timer is
 --    Output_Channel_Params -- Parameters of the output channel.
 --  USAGE
 --    Define the following fields of this record :
---      * Mode : The mode of the output channel,of type OC_Mode, Timing by 
---default.
---      * Output_State : Complementary Output state, of type OC_State_Type,
---Disable by default.
---      * Output_N_State : Complementary Output N state, of type
---OC_N_State_Type, Disable by default.
---      * Pulse : An Unsigned_32 representing the pulse length in the one pulse
---mode, 0 by default.
---      * Polarity : Polarity of a complementary output, of type
---OC_Polarity_Type, High by default.
---      * N_Polarity : Polarity of a complementary output N, of type 
---OC_N_Polarity_Type, High by default.
---      * Idle_State : Idle state of the complementary output, of type
---OC_Idle_State, Reset by default.
---      * N_Idle_State : Idle state of the complementary output N,of type
---OC_N_Idle_State, Reset by default.
+--      * Mode : The mode of the output channel,of type OC_Mode, Timing by default.
+--      * Output_State : Complementary Output state, of type OC_State_Type, Disable by default.
+--      * Output_N_State : Complementary Output N state, of type OC_N_State_Type, Disable by default.
+--      * Pulse : An Unsigned_32 representing the pulse length in the one pulse mode, 0 by default.
+--      * Polarity : Polarity of a complementary output, of type OC_Polarity_Type, High by default.
+--      * N_Polarity : Polarity of a complementary output N, of type OC_N_Polarity_Type, High by default.
+--      * Idle_State : Idle state of the complementary output, of type OC_Idle_State, Reset by default.
+--      * N_Idle_State : Idle state of the complementary output N,of type OC_N_Idle_State, Reset by default.
 --  SEE ALSO
---    OC_Mode, OC_State_Type, OC_N_State_Type, OC_Polarity_Type,
---OC_N_Polarity_Type, OC_Idle_State, OC_N_Idle_State
+--    OC_Mode, OC_State_Type, OC_N_State_Type, OC_Polarity_Type, OC_N_Polarity_Type, OC_Idle_State, OC_N_Idle_State
 --
 --*****
 
@@ -419,16 +398,14 @@ package Stm32.Timer is
 --  SYNOPSIS
 --    Init_Timer(Timer, Params, Interrupt, Priority);
 --  FUNCTION
---    Initialize a timer with the given parameters, with a choosen interrupt
---source and a given priority.
+--    Initialize a timer with the given parameters, with a choosen interrupt source and a given priority.
 --  INPUTS
 --    Timer  - The timer to initialize, of type Timer_Number.
 --    Params - The parameters of the timer, of type Timer_Params.
 --    Interrupt - The interrupt source, of type Timer_Interrupt_Source.
 --    Priority - The priority of the interrupt, of type IRQ_Priority.
 --  SEE ALSO
---    Timer_Number, Timer_Params, Timer_Interrupt_Source,
---Stm32.NVIC/IRQ_Priority
+--    Timer_Number, Timer_Params, Timer_Interrupt_Source, Stm32.NVIC/IRQ_Priority
 --
 --*****
 
@@ -447,8 +424,7 @@ package Stm32.Timer is
 --    Clear the given interrupt of the given timer.
 --  INPUTS
 --    Timer - The number of the timer, of type Timer_Number.
---    Interrupt - The souce of the interrupt to clear, of type
---Timer_Interrupt_Source.
+--    Interrupt - The souce of the interrupt to clear, of type Timer_Interrupt_Source.
 --  SEE ALSO
 --    Timer_Number, Timer_Interrupt_Source
 --

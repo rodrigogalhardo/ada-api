@@ -49,7 +49,7 @@
       * Mode : The mode of the ADC, <a href="#robo15">Mode_Type</a>.
       * Prescaler : The clock divider, of type <a href="#robo17">Prescaler_Type</a>.
       * DMA_Access_Mode : The DMA access mode, of type <a href="#robo11">DMA_Mode_Type</a>.
-      * Two_Sampling_Delay : The delay between two samplings, of type
+      * Two_Sampling_Delay : The delay between two samplings, of type <a href="#robo24">Two_Sampling_Delay_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo15">Mode_Type</a>, <a href="#robo17">Prescaler_Type</a>, <a href="#robo11">DMA_Mode_Type</a>, <a href="#robo24">Two_Sampling_Delay_Type</a>
@@ -145,15 +145,15 @@
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
       * Resolution : The resolution of the conversion, of type <a href="#robo20">Resolution_Type</a>
-      * Scan_Conv_Mode : Whether the conversion is performed in Scan
-      * Continuous_Conv_Mode : Continuous or Single mode, of type
-      * External_Trig_Conv_Edge : Select external trigger edge, of type
-      * External_Trig_Conv : The event used to trigger, of type
+      * Scan_Conv_Mode : Whether the conversion is performed in Scan (multichannels) or Single (one channel) mode, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+      * Continuous_Conv_Mode : Continuous or Single mode, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+      * External_Trig_Conv_Edge : Select external trigger edge, of type <a href="#robo13">External_Trigger_Edge_Type</a>.
+      * External_Trig_Conv : The event used to trigger, of type <a href="#robo14">External_Trigger_Source_Type</a>.
       * Data_Align : The align of the data, of type <a href="#robo9">Data_Align_Type</a>.
-      * Nbr_Of_Conversion : The number of conversions, of type
+      * Nbr_Of_Conversion : The number of conversions, of type <a href="#robo16">Nbr_Of_Conversion_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo20">Resolution_Type</a>, <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>,
+<pre>    <a href="#robo20">Resolution_Type</a>, <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>, <a href="#robo13">External_Trigger_Edge_Type</a>, <a href="#robo14">External_Trigger_Source_Type</a>, <a href="#robo9">Data_Align_Type</a>, <a href="#robo16">Nbr_Of_Conversion_Type</a>
 </pre>
 
 <hr />
@@ -251,7 +251,7 @@
       * Disable : Disable DMA
       * Mode_1 : A Half-word transfered for each DMA request.
       * Mode_2 : Two half-words transfered for each DMA request.
-      * Mode_3 : A half-word transfered for each DMA request but composed of
+      * Mode_3 : A half-word transfered for each DMA request but composed of two differents conversions.
 </pre>
 
 <hr />
@@ -300,7 +300,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>External_Trigger_Source_Type</strong> -- The external event used to trigger the
+<pre>    <strong>External_Trigger_Source_Type</strong> -- The external event used to trigger the start of conversion of a regular group.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between :
@@ -350,7 +350,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>Nbr_Of_Conversion_Type</strong> -- Number of ADC conversion that will be done using
+<pre>    <strong>Nbr_Of_Conversion_Type</strong> -- Number of ADC conversion that will be done using the sequencer for regular channel group.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    An Integer between 1 and 8 included.
@@ -396,7 +396,7 @@
 <pre>    <strong>Regular_Channel_Config</strong>(ADC, Channel, Rank, Sample_Time);
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Configures an ADC regular channel with its rank in the sequencer and
+<pre>    Configures an ADC regular channel with its rank in the sequencer and its sample time.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
@@ -519,7 +519,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-adc.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+<p>Generated from ./hwinterface/drivers/stm32-adc.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 00:20:59
 </p>
 </div> <!-- footer -->
 </body>

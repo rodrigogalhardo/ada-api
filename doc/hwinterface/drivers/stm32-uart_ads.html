@@ -34,6 +34,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    This array gives the alternate function corresponding to an uart_number.
+  It is an array of <a href="./stm32-gpio_ads.html#robo66">Alternate_Function</a> and its index is an <a href="#robo283">UART_Number</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="./stm32-gpio_ads.html#robo85">Stm32.GPIO</a>/<a href="./stm32-gpio_ads.html#robo66">Alternate_Function</a>
@@ -74,6 +75,7 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Clear the flag of the interrupt linked to the given flag of the given
+  uart.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    UART - The number of the UART, of type <a href="#robo283">UART_Number</a>
@@ -125,6 +127,7 @@
     Tx     - The transmission pin, of type <a href="./stm32-gpio_ads.html#robo80">Pin_Type</a>.
     Rx     - The reception pin, of type <a href="./stm32-gpio_ads.html#robo80">Pin_Type</a>.
     Tx_PP  - A Boolean to indicate if the transmission pin is in Push/Pull,
+  False by default.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="#robo283">UART_Number</a>,<a href="./stm32-gpio_ads.html#robo85">Stm32.GPIO</a>/<a href="./stm32-gpio_ads.html#robo80">Pin_Type</a>
@@ -227,6 +230,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between None if you want no control, RTS for a Ready To <a href="./stm32-usb_ads.html#robo287">Send</a>
+  control, CTS for a Clear To <a href="./stm32-usb_ads.html#robo287">Send</a> control and RTS_CTS for both of them.
 </pre>
 
 <hr />
@@ -267,6 +271,7 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Get the status of the interruption linked to a flag, to know for example
+  if this flag called the interrupt.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    UART - The number of the uart, of type <a href="#robo283">UART_Number</a>
@@ -289,6 +294,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    This is an array of <a href="./stm32-nvic_ads.html#robo168">IRQn_Type</a>. It gives the interrupt corresponding to an
+  uart (in index), of type <a href="#robo283">UART_Number</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre>    <a href="./stm32-nvic_ads.html#robo168">IRQn_Type</a>, <a href="#robo283">UART_Number</a>
@@ -304,6 +310,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between No_Parity for no bit of parity, Odd_Parity for an odd bit of
+  parity and Even_Parity for an even bit of parity.
 </pre>
 
 <hr />
@@ -365,6 +372,7 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Activate or desactivate the USART DMA request for the given UART and for
+  the given request type.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    UART  - The Number of the UART, of type <a href="#robo283">UART_Number</a>
@@ -409,6 +417,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between Stop_1 for a stop bit of length 1, Stop_0_5 for a length of
+  0.5, Stop_2 for a length of 2 and Stop_1_5 for a length of 1.5.
 </pre>
 
 <hr />
@@ -465,6 +474,7 @@
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Choose between Mode_None for no mode, Mode_Rx for reception mode, Mode_Tx
+  for transmission mode and Mode_Both for both reception and transmission mode.
 </pre>
 
 <hr />
@@ -497,7 +507,7 @@
       * Flow_Control: The flow control, of type <a href="#robo270">Flow_Control_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo285">Word_Length_Type</a>, <a href="#robo279">Stop_Type</a>, <a href="#robo274">Parity_Type</a>, <a href="#robo282">UART_Mode_Type</a>,
+<pre>    <a href="#robo285">Word_Length_Type</a>, <a href="#robo279">Stop_Type</a>, <a href="#robo274">Parity_Type</a>, <a href="#robo282">UART_Mode_Type</a>, <a href="#robo270">Flow_Control_Type</a>
 </pre>
 
 <hr />
@@ -514,7 +524,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-uart.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Thu Jan 01 2015 23:21:19
+<p>Generated from ./hwinterface/drivers/stm32-uart.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 00:20:59
 </p>
 </div> <!-- footer -->
 </body>
