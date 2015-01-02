@@ -6,7 +6,7 @@ all :
 	@mkdir -p objs
 	$(CROSS)gnatmake $(FLAGS)
 
-doc :
+doc : clean-doc
 	robodoc --src ./ --doc  ./doc --multidoc --index --html
 
 clean :

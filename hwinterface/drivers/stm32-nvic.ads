@@ -37,7 +37,7 @@ with Ada.Interrupts; use Ada.Interrupts;
 
 package Stm32.NVIC is
 
---****c* Stm32.NVIC/IRQn_Type
+--****t* Stm32.NVIC/IRQn_Type
 --
 --  NAME
 --    IRQn_Type -- The number of this interrupt.
