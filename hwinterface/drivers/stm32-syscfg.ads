@@ -62,6 +62,11 @@ package Stm32.SYSCFG is
 --    Choose between :
 --      * Flash : Main Flash memory mapped at 0x00000000.
 --      * SystemFlash : System Flash memory mapped at 0x00000000.
+--      * FSMC : FSMC (Bank1 (NOR/PSRAM 1 and 2) mapped at 0x00000000 for
+--  STM32F405xx/407xx and STM32F415xx/417xx devices. Must be uncommented in the
+--  code if you need it.
+--      * FMC  : FMC (Bank1 (NOR/PSRAM 1 and 2) mapped at 0x00000000 for
+--  STM32F42xxx/43xxx devices.  Must be uncommented in the code if you need it.
 --      * SRAM : Embedded SRAM (112kB) mapped at 0x00000000.
 --      * SDRAM :  FMC (External SDRAM) mapped at 0x00000000 for
 --  STM32F42xxx/43xxx devices.
@@ -69,10 +74,14 @@ package Stm32.SYSCFG is
 --*****
 
   type MemoryRemap is
-    (Flash,SystemFlash,SRAM,SDRAM);
+    (Flash,SystemFlash,SRAM,SDRAM); --add FSMC or FMC if needed.
   for MemoryRemap use
     (Flash      => 16#00#,
     SystemFlash => 16#01#,
+--Declare FSMC or FMC
+--  FSMC        => 16#02#, --for STM32F405xx/407xx and STM32F415xx/417xx
+--devices.
+--  FMC         => 16#02#, --for STM32F42xxx/43xxx devices.
     SRAM        => 16#03#,
     SDRAM       => 16#04#);
   for MemoryRemap'Size use 8;

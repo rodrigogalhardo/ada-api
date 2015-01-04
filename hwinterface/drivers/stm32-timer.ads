@@ -469,7 +469,7 @@ package Stm32.Timer is
 --    Channel - The channel to setup, of type Timer_Channel_Number.
 --    Params - The parameters of the channel, of type Output_Channel_Params.
 --  SEE ALSO
---    Timer_Number, Timer_Output_Number, Output_Channel_Params
+--    Timer_Number, Timer_Channel_Number, Output_Channel_Params
 --
 --*****
 

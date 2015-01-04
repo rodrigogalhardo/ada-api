@@ -88,6 +88,11 @@
 <pre>    Choose between :
       * Flash : Main Flash memory mapped at 0x00000000.
       * SystemFlash : System Flash memory mapped at 0x00000000.
+      * FSMC : FSMC (Bank1 (NOR/PSRAM 1 and 2) mapped at 0x00000000 for
+  STM32F405xx/407xx and STM32F415xx/417xx devices. Must be uncommented in the
+  code if you need it.
+      * FMC  : FMC (Bank1 (NOR/PSRAM 1 and 2) mapped at 0x00000000 for
+  STM32F42xxx/43xxx devices.  Must be uncommented in the code if you need it.
       * SRAM : Embedded SRAM (112kB) mapped at 0x00000000.
       * SDRAM :  FMC (External SDRAM) mapped at 0x00000000 for
   STM32F42xxx/43xxx devices.
@@ -288,7 +293,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-syscfg.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 02 2015 13:34:12
+<p>Generated from ./hwinterface/drivers/stm32-syscfg.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Sun Jan 04 2015 17:03:28
 </p>
 </div> <!-- footer -->
 </body>
