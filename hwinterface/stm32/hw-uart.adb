@@ -29,46 +29,75 @@ with Stack_Size;
 
 package body Hw.UART is
 
+
+  --The queue can contains 2048 characters.
   subtype Queue_Type is String (1 .. 2048);
 
+  --An access to the uart peripheral description.
   type UART_Desc_Access is access all UART_Desc;
 
+  --Setup uart with the given parmeters.
   procedure Setup_UART (UART : UART_Number; Tx_Pin : Pin_Type;
                         Rx_Pin : Pin_Type; Speed : Integer;
                         Use_En : Boolean; Tx_PP : Boolean);
 
+  --Internal uart function
   protected type UART_Type (UART : UART_Desc_Access) is
+
+    --Maximum Priority
     pragma Interrupt_Priority (Max_Interrupt_Priority);
+
+    --Initialize the given uart with the speed.
     procedure Initialize (Speed : Integer);
 
+    --Read if there is something to read
     entry Wait (C : out Character; Canceled : out Boolean);
+    --Send a string
     procedure Send (S : String);
+    --Empty the queue
     procedure Flush;
 
+    --Set the timeout value
     procedure Set_Timeout (T : Time);
+    --Check if the timeout was exceeded.
     procedure Check_Timeout;
   private
+    --Start the DMA transfert.
     procedure Start_DMA_Transfer;
+    --The handler of the UART.
     procedure UART_Interrupt_Handler;
+    --Attach the handler
     pragma Attach_Handler (UART_Interrupt_Handler,
                            Stm32.UART.IRQ (UART.UART_Rx));
+    --DMA handler
     procedure DMA_Interrupt_Handler;
+    --Attach the DMA handler
     pragma Attach_Handler (DMA_Interrupt_Handler,
                            Stm32.DMA.IRQ (DMA_Stream (UART.UART_Tx, Tx)));
 
+    --If the reception queue not empty
     Rx_Not_Empty : Boolean := False;
+    --Position of the read pointer
     Rx_Read : Integer := 1;
+    --Position of the write pointer
     Rx_Write : Integer := 1;
+    --The Rx queue
     Rx_Queue : Queue_Type;
 
+    --Is transmission queue not empty
     Tx_Not_Empty : Boolean := False;
+    --Read pointer
     Tx_Read : Integer := 1;
+    --Write pointer
     Tx_Write : Integer := 1;
+    --Transmission queue
     Tx_Queue : Queue_Type;
 
+    --The timeout value
     Timeout : Time;
   end UART_Type;
 
+  --Creates the uart type for each UART peripherals. 
   Serial_1 : aliased UART_Type (Bus_1_UART'Access);
   Serial_Zigbee : aliased UART_Type (Zigbee_UART'Access);
   Serial_Camera : aliased UART_Type (Camera_UART'Access);
@@ -76,10 +105,12 @@ package body Hw.UART is
 
   type UART_Type_Access is access all UART_Type;
 
+  --Link between an UART line and its caracteristics.
   UARTs : constant array (UART_Line) of UART_Type_Access :=
     (Ax_1 => Serial_1'Access, Zigbee => Serial_Zigbee'Access,
      Camera => Serial_Camera'Access, Lidar => Serial_Lidar'Access);
 
+  --Task to check if the time
   task Timeout_Checker_Task is
     pragma Priority (15);
     pragma Storage_Size (4 * Stack_Size.Default_Stack_Size);
@@ -110,6 +141,7 @@ package body Hw.UART is
 
     entry Wait (C : out Character; Canceled : out Boolean) when Rx_Not_Empty is
     begin
+      --Read the next character.
       C := Rx_Queue (Rx_Read);
       -- Clock > Timeout, Rx_Not_Empty will be set to True.
       -- Here, we have to verify that there really is something to read.
@@ -118,10 +150,12 @@ package body Hw.UART is
         if Rx_Read > Rx_Queue'Last then
           Rx_Read := Rx_Queue'First;
         end if;
+	--Something was read
         Canceled := False;
       else
         Canceled := True;
       end if;
+      --Actualize the status of reception
       Rx_Not_Empty := Rx_Read /= Rx_Write;
     end Wait;
 
