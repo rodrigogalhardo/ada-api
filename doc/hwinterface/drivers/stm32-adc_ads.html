@@ -26,9 +26,9 @@
 <div id="content">
 <hr />
 <a name="Stm322eADC2fADC5fChannel5fNumber"></a>
-<a name="robo0"></a><h2>Stm32.ADC/ADC_Channel_Number [ Types ]</h2>
+<a name="robo7"></a><h2>Stm32.ADC/ADC_Channel_Number [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Channel_Number</strong> -- The number of an ADC channel.
 </pre>
@@ -37,29 +37,51 @@
 </pre>
 
 <hr />
-<a name="Stm322eADC2fADC5fCommon5fParams"></a>
-<a name="robo1"></a><h2>Stm32.ADC/ADC_Common_Params [ Types ]</h2>
+<a name="Stm322eADC2fADC5fClearFlag"></a>
+<a name="robo8"></a><h2>Stm32.ADC/ADC_ClearFlag [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_ClearFlag</strong> -- Clears a flag
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    ADC_Clear(ADC, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Clears an ADC given flag.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    ADC  - The number of the ADC, of type <a href="#robo17">ADC_Number</a>
+    Flag - The flag to clear, of type <a href="#robo11">ADC_Flag</a>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="#robo11">ADC_Flag</a>
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fCommon5fParams"></a>
+<a name="robo9"></a><h2>Stm32.ADC/ADC_Common_Params [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Common_Params</strong> -- The common parameters of the ADCs.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
-      * Mode : The mode of the ADC, <a href="#robo15">Mode_Type</a>.
-      * Prescaler : The clock divider, of type <a href="#robo17">Prescaler_Type</a>.
-      * DMA_Access_Mode : The DMA access mode, of type <a href="#robo11">DMA_Mode_Type</a>.
-      * Two_Sampling_Delay : The delay between two samplings, of type <a href="#robo24">Two_Sampling_Delay_Type</a>.
+      * Mode : The mode of the ADC, <a href="#robo28">Mode_Type</a>.
+      * Prescaler : The clock divider, of type <a href="#robo30">Prescaler_Type</a>.
+      * DMA_Access_Mode : The DMA access mode, of type <a href="./stm32-dma_ads.html#robo47">DMA_Mode_Type</a>.
+      * Two_Sampling_Delay : The delay between two samplings, of type <a href="#robo37">Two_Sampling_Delay_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo15">Mode_Type</a>, <a href="#robo17">Prescaler_Type</a>, <a href="#robo11">DMA_Mode_Type</a>, <a href="#robo24">Two_Sampling_Delay_Type</a>
+<pre>    <a href="#robo28">Mode_Type</a>, <a href="#robo30">Prescaler_Type</a>, <a href="./stm32-dma_ads.html#robo47">DMA_Mode_Type</a>, <a href="#robo37">Two_Sampling_Delay_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fADC5fData5fRegister"></a>
-<a name="robo2"></a><h2>Stm32.ADC/ADC_Data_Register [ Functions ]</h2>
+<a name="robo10"></a><h2>Stm32.ADC/ADC_Data_Register [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Data_Register</strong> - Gives the address of the ADC data register.
 </pre>
@@ -70,20 +92,63 @@
 <pre>    Gives the address of the data register of a given ADC.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The <a href="#robo5">ADC_Number</a>, of type <a href="#robo5">ADC_Number</a>.
+<pre>    ADC - The <a href="#robo17">ADC_Number</a>, of type <a href="#robo17">ADC_Number</a>.
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    Addr - The data register address, of type System.Address.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, System/Address
+<pre>    <a href="#robo17">ADC_Number</a>, System/Address
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fFlag"></a>
+<a name="robo11"></a><h2>Stm32.ADC/ADC_Flag [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_Flag</strong> -- The flag of the ADC peripheral.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * AWD   : Analog WatchDog flag
+      * EOC   : End Of Conversion flag
+      * JEOC  : End Of inJected group Conversion flag
+      * JSTRT : STaRT of inJected group conversion flag
+      * STRT  : STaRT of regular group conversion flag
+      * OVR   : OVerRun flag
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fGetFlagStatus"></a>
+<a name="robo12"></a><h2>Stm32.ADC/ADC_GetFlagStatus [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_GetFlagStatus</strong> -- Gets the status of a flag.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    Value := <strong>ADC_GetFlagStatus</strong>(ADC, Flag);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Gets the value of a given ADC flag.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    ADC  - The ADC number, of type <a href="#robo17">ADC_Number</a>.
+    Flag - The flag to clear, of type <a href="#robo11">ADC_Flag</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Result - A boolean representing the status of the given flag.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="#robo11">ADC_Flag</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fADC5fInit"></a>
-<a name="robo3"></a><h2>Stm32.ADC/ADC_Init [ Functions ]</h2>
+<a name="robo13"></a><h2>Stm32.ADC/ADC_Init [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Init</strong> -- Initializes an ADC.
 </pre>
@@ -94,18 +159,18 @@
 <pre>    Initializes an ADC with the given parameters.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
-    Params - The parameters of the ADC, of type <a href="#robo6">ADC_Params</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
+    Params - The parameters of the ADC, of type <a href="#robo18">ADC_Params</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, <a href="#robo6">ADC_Params</a>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="#robo18">ADC_Params</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fADC5fInit5fCommon"></a>
-<a name="robo4"></a><h2>Stm32.ADC/ADC_Init_Common [ Functions ]</h2>
+<a name="robo14"></a><h2>Stm32.ADC/ADC_Init_Common [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Init_Common</strong> -- Initializes the common parameters of ADCs.
 </pre>
@@ -116,17 +181,56 @@
 <pre>    Initializes the common parameters of ADCs.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    Params - The common parameters, of type <a href="#robo1">ADC_Common_Params</a>.
+<pre>    Params - The common parameters, of type <a href="#robo9">ADC_Common_Params</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo1">ADC_Common_Params</a>
+<pre>    <a href="#robo9">ADC_Common_Params</a>
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fIT"></a>
+<a name="robo15"></a><h2>Stm32.ADC/ADC_IT [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_IT</strong> -- ADC interrupts
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * IT_AWD - Analog watchdog interrupt
+      * IT_EOC - End of conversion interrupt
+      * IT_JEOC - End of injected conversion interrupt
+      * IT_OVR - Overrun interrupt
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fITConfig"></a>
+<a name="robo16"></a><h2>Stm32.ADC/ADC_ITConfig [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_ITConfig</strong> -- Configures an interrupt.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>ADC_ITConfig</strong> (ADC, IT, State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Enables or disables the specified ADC interrupts.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>
+    IT  - The interrupt to configure, of type <a href="#robo15">ADC_IT</a>
+    State - The new state of the interrupt, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="#robo15">ADC_IT</a>, <a href="./stm32-defines_ads.html#robo39">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo38">FunctionalState</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fADC5fNumber"></a>
-<a name="robo5"></a><h2>Stm32.ADC/ADC_Number [ Types ]</h2>
+<a name="robo17"></a><h2>Stm32.ADC/ADC_Number [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Number</strong> -- The number of the ADC peripheral.
 </pre>
@@ -136,31 +240,52 @@
 
 <hr />
 <a name="Stm322eADC2fADC5fParams"></a>
-<a name="robo6"></a><h2>Stm32.ADC/ADC_Params [ Types ]</h2>
+<a name="robo18"></a><h2>Stm32.ADC/ADC_Params [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>ADC_Params</strong> - The parameters of an ADC.
 </pre>
 <p class="item_name">USAGE</p>
 <pre>    Define the following fields of the record :
-      * Resolution : The resolution of the conversion, of type <a href="#robo20">Resolution_Type</a>
-      * Scan_Conv_Mode : Whether the conversion is performed in Scan (multichannels) or Single (one channel) mode, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
-      * Continuous_Conv_Mode : Continuous or Single mode, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
-      * External_Trig_Conv_Edge : Select external trigger edge, of type <a href="#robo13">External_Trigger_Edge_Type</a>.
-      * External_Trig_Conv : The event used to trigger, of type <a href="#robo14">External_Trigger_Source_Type</a>.
-      * Data_Align : The align of the data, of type <a href="#robo9">Data_Align_Type</a>.
-      * Nbr_Of_Conversion : The number of conversions, of type <a href="#robo16">Nbr_Of_Conversion_Type</a>.
+      * Resolution : The resolution of the conversion, of type <a href="#robo33">Resolution_Type</a>
+      * Scan_Conv_Mode : Whether the conversion is performed in Scan (multichannels) or Single (one channel) mode, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>.
+      * Continuous_Conv_Mode : Continuous or Single mode, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>.
+      * External_Trig_Conv_Edge : Select external trigger edge, of type <a href="#robo26">External_Trigger_Edge_Type</a>.
+      * External_Trig_Conv : The event used to trigger, of type <a href="#robo27">External_Trigger_Source_Type</a>.
+      * Data_Align : The align of the data, of type <a href="#robo22">Data_Align_Type</a>.
+      * Nbr_Of_Conversion : The number of conversions, of type <a href="#robo29">Nbr_Of_Conversion_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo20">Resolution_Type</a>, <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>, <a href="#robo13">External_Trigger_Edge_Type</a>, <a href="#robo14">External_Trigger_Source_Type</a>, <a href="#robo9">Data_Align_Type</a>, <a href="#robo16">Nbr_Of_Conversion_Type</a>
+<pre>    <a href="#robo33">Resolution_Type</a>, <a href="./stm32-defines_ads.html#robo39">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo38">FunctionalState</a>, <a href="#robo26">External_Trigger_Edge_Type</a>, <a href="#robo27">External_Trigger_Source_Type</a>, <a href="#robo22">Data_Align_Type</a>, <a href="#robo29">Nbr_Of_Conversion_Type</a>
+</pre>
+
+<hr />
+<a name="Stm322eADC2fADC5fTempSensorVrefintCmd"></a>
+<a name="robo19"></a><h2>Stm32.ADC/ADC_TempSensorVrefintCmd [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ADC_TempSensorVrefintCmd</strong> -- States of the temperature sensor.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>ADC_TempSensorVrefintCmd</strong>(State);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Enables or disables the temperature sensor and Vrefint channels.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    State - The new state of the temperature sensor, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="./stm32-defines_ads.html#robo39">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo38">FunctionalState</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fConfigure5fADC"></a>
-<a name="robo7"></a><h2>Stm32.ADC/Configure_ADC [ Functions ]</h2>
+<a name="robo20"></a><h2>Stm32.ADC/Configure_ADC [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Configure_ADC</strong> -- Enables or disables an ADC.
 </pre>
@@ -171,18 +296,18 @@
 <pre>    Enables or disables the given ADC.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
-    State - Activation of ADC, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
+    State - Activation of ADC, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, Stm23.Defines/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>
+<pre>    <a href="#robo17">ADC_Number</a>, Stm23.Defines/<a href="./stm32-defines_ads.html#robo38">FunctionalState</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fConfigure5fADC5fDMA"></a>
-<a name="robo8"></a><h2>Stm32.ADC/Configure_ADC_DMA [ Functions ]</h2>
+<a name="robo21"></a><h2>Stm32.ADC/Configure_ADC_DMA [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Configure_ADC_DMA</strong> -- Enables or diables DMA for an ADC.
 </pre>
@@ -193,18 +318,18 @@
 <pre>    Enables or disables the DMA for an ADC.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
-    State - Activation of the DMA, of type <a href="./stm32-defines_ads.html#robo25">FunctionalState</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
+    State - Activation of the DMA, of type <a href="./stm32-defines_ads.html#robo38">FunctionalState</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo25">FunctionalState</a>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="./stm32-defines_ads.html#robo39">Stm32.Defines</a>/<a href="./stm32-defines_ads.html#robo38">FunctionalState</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fData5fAlign5fType"></a>
-<a name="robo9"></a><h2>Stm32.ADC/Data_Align_Type [ Types ]</h2>
+<a name="robo22"></a><h2>Stm32.ADC/Data_Align_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Data_Align_Type</strong> -- The data alignment.
 </pre>
@@ -216,9 +341,9 @@
 
 <hr />
 <a name="Stm322eADC2fDMA5fChannel"></a>
-<a name="robo10"></a><h2>Stm32.ADC/DMA_Channel [ Functions ]</h2>
+<a name="robo23"></a><h2>Stm32.ADC/DMA_Channel [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>DMA_Channel</strong> -- Gives the channel of an ADC.
 </pre>
@@ -229,20 +354,20 @@
 <pre>    Gives the DMA channel of an ADC.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    Channel - The DMA channel of the ADC, of type <a href="./stm32-dma_ads.html#robo31">DMA_Channel_Type</a>
+<pre>    Channel - The DMA channel of the ADC, of type <a href="./stm32-dma_ads.html#robo44">DMA_Channel_Type</a>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, <a href="./stm32-dma_ads.html#robo49">Stm32.DMA</a>/<a href="./stm32-dma_ads.html#robo31">DMA_Channel_Type</a>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="./stm32-dma_ads.html#robo62">Stm32.DMA</a>/<a href="./stm32-dma_ads.html#robo44">DMA_Channel_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fDMA5fMode5fType"></a>
-<a name="robo11"></a><h2>Stm32.ADC/DMA_Mode_Type [ Types ]</h2>
+<a name="robo24"></a><h2>Stm32.ADC/DMA_Mode_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>DMA_Mode_Type</strong> -- The DMA mode for multi ADC mode.
 </pre>
@@ -256,9 +381,9 @@
 
 <hr />
 <a name="Stm322eADC2fDMA5fStream"></a>
-<a name="robo12"></a><h2>Stm32.ADC/DMA_Stream [ Functions ]</h2>
+<a name="robo25"></a><h2>Stm32.ADC/DMA_Stream [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>DMA_Stream</strong> - Gives the DMA stream of an ADC.
 </pre>
@@ -269,20 +394,20 @@
 <pre>    Gives the DMA stream of a given ADC.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    Stream - The DMA stream of the ADC, of type <a href="./stm32-dma_ads.html#robo36">DMA_Stream_Type</a>.
+<pre>    Stream - The DMA stream of the ADC, of type <a href="./stm32-uart_ads.html#robo282">DMA_Stream_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, <a href="./stm32-dma_ads.html#robo49">Stm32.DMA</a>/<a href="./stm32-dma_ads.html#robo36">DMA_Stream_Type</a>.
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="./stm32-dma_ads.html#robo62">Stm32.DMA</a>/<a href="./stm32-uart_ads.html#robo282">DMA_Stream_Type</a>.
 </pre>
 
 <hr />
 <a name="Stm322eADC2fExternal5fTrigger5fEdge5fType"></a>
-<a name="robo13"></a><h2>Stm32.ADC/External_Trigger_Edge_Type [ Types ]</h2>
+<a name="robo26"></a><h2>Stm32.ADC/External_Trigger_Edge_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>External_Trigger_Edge_Type</strong> -- The external trigger edge.
 </pre>
@@ -296,9 +421,9 @@
 
 <hr />
 <a name="Stm322eADC2fExternal5fTrigger5fSource5fType"></a>
-<a name="robo14"></a><h2>Stm32.ADC/External_Trigger_Source_Type [ Types ]</h2>
+<a name="robo27"></a><h2>Stm32.ADC/External_Trigger_Source_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>External_Trigger_Source_Type</strong> -- The external event used to trigger the start of conversion of a regular group.
 </pre>
@@ -321,9 +446,9 @@
 
 <hr />
 <a name="Stm322eADC2fMode5fType"></a>
-<a name="robo15"></a><h2>Stm32.ADC/Mode_Type [ Types ]</h2>
+<a name="robo28"></a><h2>Stm32.ADC/Mode_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Mode_Type</strong> -- ADC mode (independent or multi mode)
 </pre>
@@ -346,9 +471,9 @@
 
 <hr />
 <a name="Stm322eADC2fNbr5fOf5fConversion5fType"></a>
-<a name="robo16"></a><h2>Stm32.ADC/Nbr_Of_Conversion_Type [ Types ]</h2>
+<a name="robo29"></a><h2>Stm32.ADC/Nbr_Of_Conversion_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Nbr_Of_Conversion_Type</strong> -- Number of ADC conversion that will be done using the sequencer for regular channel group.
 </pre>
@@ -358,9 +483,9 @@
 
 <hr />
 <a name="Stm322eADC2fPrescaler5fType"></a>
-<a name="robo17"></a><h2>Stm32.ADC/Prescaler_Type [ Types ]</h2>
+<a name="robo30"></a><h2>Stm32.ADC/Prescaler_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Prescaler_Type</strong> -- Division of the common ADC clock.
 </pre>
@@ -374,9 +499,9 @@
 
 <hr />
 <a name="Stm322eADC2fRank5fType"></a>
-<a name="robo18"></a><h2>Stm32.ADC/Rank_Type [ Types ]</h2>
+<a name="robo31"></a><h2>Stm32.ADC/Rank_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    The rank in the regular group sequencer.
 </pre>
@@ -386,9 +511,9 @@
 
 <hr />
 <a name="Stm322eADC2fRegular5fChannel5fConfig"></a>
-<a name="robo19"></a><h2>Stm32.ADC/Regular_Channel_Config [ Functions ]</h2>
+<a name="robo32"></a><h2>Stm32.ADC/Regular_Channel_Config [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Regular_Channel_Config</strong> -- Configures an ADC regular channel.
 </pre>
@@ -399,20 +524,20 @@
 <pre>    Configures an ADC regular channel with its rank in the sequencer and its sample time.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The ADC number, of type <a href="#robo5">ADC_Number</a>.
-    Channel - The channel to configure, of type <a href="#robo0">ADC_Channel_Number</a>.
-    Rank - The rank in the sequencer, of type <a href="#robo18">Rank_Type</a>.
-    Sample_Time - The sample time, of type <a href="#robo21">Sample_Time_Type</a>.
+<pre>    ADC - The ADC number, of type <a href="#robo17">ADC_Number</a>.
+    Channel - The channel to configure, of type <a href="#robo7">ADC_Channel_Number</a>.
+    Rank - The rank in the sequencer, of type <a href="#robo31">Rank_Type</a>.
+    Sample_Time - The sample time, of type <a href="#robo34">Sample_Time_Type</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>, <a href="#robo0">ADC_Channel_Number</a>, <a href="#robo18">Rank_Type</a>, <a href="#robo21">Sample_Time_Type</a>
+<pre>    <a href="#robo17">ADC_Number</a>, <a href="#robo7">ADC_Channel_Number</a>, <a href="#robo31">Rank_Type</a>, <a href="#robo34">Sample_Time_Type</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fResolution5fType"></a>
-<a name="robo20"></a><h2>Stm32.ADC/Resolution_Type [ Types ]</h2>
+<a name="robo33"></a><h2>Stm32.ADC/Resolution_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Resolution_Type</strong> -- The ADC resolution dual mode.
 </pre>
@@ -426,9 +551,9 @@
 
 <hr />
 <a name="Stm322eADC2fSample5fTime5fType"></a>
-<a name="robo21"></a><h2>Stm32.ADC/Sample_Time_Type [ Types ]</h2>
+<a name="robo34"></a><h2>Stm32.ADC/Sample_Time_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Sample_Time_Type</strong> -- A sample time value.
 </pre>
@@ -446,9 +571,9 @@
 
 <hr />
 <a name="Stm322eADC2fStart5fConv"></a>
-<a name="robo22"></a><h2>Stm32.ADC/Start_Conv [ Functions ]</h2>
+<a name="robo35"></a><h2>Stm32.ADC/Start_Conv [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Start_Conv</strong> -- Starts the conversion of the regular channels.
 </pre>
@@ -459,15 +584,15 @@
 <pre>    Starts the conversion of the regular channels.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    ADC - The <a href="#robo5">ADC_Number</a>, of type <a href="#robo5">ADC_Number</a>.
+<pre>    ADC - The <a href="#robo17">ADC_Number</a>, of type <a href="#robo17">ADC_Number</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo5">ADC_Number</a>
+<pre>    <a href="#robo17">ADC_Number</a>
 </pre>
 
 <hr />
 <a name="Stm322eADC2fStm322eADC"></a>
-<a name="robo23"></a><h2>Stm32.ADC/Stm32.ADC [ Classes ]</h2>
+<a name="robo36"></a><h2>Stm32.ADC/Stm32.ADC [ Classes ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
 <p class="item_name">NAME</p>
@@ -486,14 +611,14 @@
 <pre>    Julien Brette &amp; Julien Romero
 </pre>
 <p class="item_name">USES</p>
-<pre>    Interfaces, <a href="./stm32-defines_ads.html#robo26">Stm32.Defines</a>, <a href="./stm32-dma_ads.html#robo49">Stm32.DMA</a>, System
+<pre>    Interfaces, <a href="./stm32-defines_ads.html#robo39">Stm32.Defines</a>, <a href="./stm32-dma_ads.html#robo62">Stm32.DMA</a>, System
 </pre>
 
 <hr />
 <a name="Stm322eADC2fTwo5fSampling5fDelay5fType"></a>
-<a name="robo24"></a><h2>Stm32.ADC/Two_Sampling_Delay_Type [ Types ]</h2>
+<a name="robo37"></a><h2>Stm32.ADC/Two_Sampling_Delay_Type [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo23">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Stm32.ADC</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Two_Sampling_Delay_Type</strong> -- The delay between two sampling phases.
 </pre>
@@ -519,7 +644,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./hwinterface/drivers/stm32-adc.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Sun Jan 04 2015 17:03:28
+<p>Generated from ./hwinterface/drivers/stm32-adc.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Fri Jan 23 2015 10:32:54
 </p>
 </div> <!-- footer -->
 </body>
