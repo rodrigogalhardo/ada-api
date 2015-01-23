@@ -160,4 +160,17 @@ package body Stm32.ADC is
     return Streams (ADC).Channel;
   end DMA_Channel;
 
+  -----------------------
+  -- ADC_GetFlagStatus --
+  -----------------------
+
+  function ADC_GetFlagStatus (ADC : ADC_Number;
+                              Flag : ADC_Flag) return Boolean is
+    function GetFlagStatus (ADC : ADC_Number;
+                            Flag : ADC_Flag) return Unsigned_32;
+    pragma Import (C, GetFlagStatus, "ADC_GetFlagStatus");
+  begin
+    return GetFlagStatus(ADC) /= 0;
+  end ADC_GetFlagStatus;
+
 end Stm32.ADC;

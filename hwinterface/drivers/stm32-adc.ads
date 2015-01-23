@@ -411,6 +411,52 @@ package Stm32.ADC is
     Two_Sampling_Delay : Two_Sampling_Delay_Type;
   end record;
 
+--****t* Stm32.ADC/ADC_Flag
+--
+--  NAME
+--    ADC_Flag -- The flag of the ADC peripheral.
+--  USAGE
+--    Choose between :
+--      * AWD   : Analog WatchDog flag
+--      * EOC   : End Of Conversion flag
+--      * JEOC  : End Of inJected group Conversion flag
+--      * JSTRT : STaRT of inJected group conversion flag
+--      * STRT  : STaRT of regular group conversion flag
+--      * OVR   : OVerRun flag
+--
+--*****
+
+  type ADC_Flag is (AWD, EOC, JEOC, JSTRT, OVR, STRT);
+  for ADC_Flag'Size use 8;
+  for ADC_Flag use (
+    AWD   => 16#01#,
+    EOC   => 16#02#,
+    JEOC  => 16#04#,
+    JSTRT => 16#08#,
+    STRT  => 16#10#,
+    OVR   => 16#20#);
+
+--****t* Stm32.ADC/ADC_IT
+--
+--  NAME
+--    ADC_IT -- ADC interrupts
+--  USAGE
+--    Choose between :
+--      * IT_AWD - Analog watchdog interrupt
+--      * IT_EOC - End of conversion interrupt
+--      * IT_JEOC - End of injected conversion interrupt
+--      * IT_OVR - Overrun interrupt
+--
+--*****
+
+  type ADC_IT is (IT_EOC, IT_AWD, IT_JEOC, IT_OVR);
+  for ADC_IT'Size use 16;
+  for ADC_IT use (
+    IT_AWD  => 16#0106#,
+    IT_EOC  => 16#0205#,
+    IT_JEOC => 16#0407#,
+    IT_OVR  => 16#201A#);
+
 --****f* Stm32.ADC/ADC_Init
 --
 --  NAME
@@ -577,5 +623,85 @@ package Stm32.ADC is
 --*****
 
   function DMA_Channel (ADC : ADC_Number) return DMA_Channel_Type;
+
+--****f* Stm32.ADC/ADC_GetFlagStatus
+--
+--  NAME
+--    ADC_GetFlagStatus -- Gets the status of a flag.
+--  SYNOPSIS
+--    Value := ADC_GetFlagStatus(ADC, Flag);
+--  FUNCTION
+--    Gets the value of a given ADC flag.
+--  INPUTS
+--    ADC  - The ADC number, of type ADC_Number.
+--    Flag - The flag to clear, of type ADC_Flag.
+--  RESULT
+--    Result - A boolean representing the status of the given flag.
+--  SEE ALSO
+--    ADC_Number, ADC_Flag
+--
+--*****
+
+  function ADC_GetFlagStatus (ADC : ADC_Number;
+                              Flag : ADC_Flag) return Boolean;
+
+--****f* Stm32.ADC/ADC_ClearFlag
+--
+--  NAME
+--    ADC_ClearFlag -- Clears a flag
+--  SYNOPSIS
+--    ADC_Clear(ADC, Flag);
+--  FUNCTION
+--    Clears an ADC given flag.
+--  INPUTS
+--    ADC  - The number of the ADC, of type ADC_Number
+--    Flag - The flag to clear, of type ADC_Flag
+--  SEE ALSO
+--    ADC_Number, ADC_Flag
+--
+--*****
+
+  procedure ADC_ClearFlag (ADC : ADC_Number; Flag : ADC_Flag);
+  pragma Import (C, ADC_ClearFlag, "ADC_ClearFlag");
+
+--****f* Stm32.ADC/ADC_TempSensorVrefintCmd
+--
+--  NAME
+--    ADC_TempSensorVrefintCmd -- States of the temperature sensor.
+--  SYNOPSIS
+--    ADC_TempSensorVrefintCmd(State);
+--  FUNCTION
+--    Enables or disables the temperature sensor and Vrefint channels.
+--  INPUTS
+--    State - The new state of the temperature sensor, of type FunctionalState
+--  SEE ALSO
+--    Stm32.Defines/FunctionalState
+--
+--*****
+
+  procedure ADC_TempSensorVrefintCmd (State : FunctionalState);
+  pragma Import (C, ADC_TempSensorVrefintCmd, "ADC_TempSensorVrefintCmd");
+
+--****f* Stm32.ADC/ADC_ITConfig
+--
+--  NAME
+--    ADC_ITConfig -- Configures an interrupt.
+--  SYNOPSIS
+--    ADC_ITConfig (ADC, IT, State);
+--  FUNCTION
+--    Enables or disables the specified ADC interrupts.
+--  INPUTS
+--    ADC - The ADC number, of type ADC_Number
+--    IT  - The interrupt to configure, of type ADC_IT
+--    State - The new state of the interrupt, of type FunctionalState.
+--  SEE ALSO
+--    ADC_Number, ADC_IT, Stm32.Defines/FunctionalState
+--
+--*****
+
+  procedure ADC_ITConfig (ADC    : ADC_Number;
+                          IT : ADC_IT;
+			  State : FunctionalState);
+  pragma Import (C, ADC_ITConfig, "ADC_ITConfig");
 
 end Stm32.ADC;
