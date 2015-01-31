@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../../robodoc.css" type="text/css" />
+<title>./hwinterface/stm32/hw-uart.ads</title>
+<!-- Source: ./hwinterface/stm32/hw-uart.ads -->
+<!-- Generated with ROBODoc Version 4.99.42 (Dec 12 2014) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../../robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="../../masterindex.html#top">Index</a>
+<a class="menuitem" href="../../robo_classes.html#top">Classes</a>
+<a class="menuitem" href="../../robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="../../robo_functions.html#top">Functions</a>
+<a class="menuitem" href="../../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="Hw2eUART2fFlush"></a>
+<a name="robo0"></a><h2>Hw.UART/Flush [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Flush</strong> -- <strong>Flush</strong> uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Flush</strong>(UART);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    <strong>Flush</strong> a given uart.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart line, of type <a href="#robo5">UART_Line</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo5">UART_Line</a>
+</pre>
+
+<hr />
+<a name="Hw2eUART2fHw2eUART"></a>
+<a name="robo1"></a><h2>Hw.UART/Hw.UART [ Classes ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../../robo_classes.html#robo_top_of_doc">Classes</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Hw.UART</strong> -- Package for Analog to Digital Converter.
+</pre>
+<p class="item_name">COPYRIGHT</p>
+<pre>    (c) 2014 by Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    with <strong>Hw.UART</strong>;
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Advanced functions for UART, with predefined peripherals. It will use the
+  following GPIO pins :
+    * PA2 for AX12 Tx
+    * PA3 for AX12 Rx
+    * PA1 for AX12 Enable
+    * PC10 for Zigbee Tx
+    * PC11 for Zigbee Rx
+    * PD8 for Camera Tx.
+    * PD9 for Camera Rx.
+    * PC7 for Lidar.
+    * PD4, forced Low.
+    * PE3, forced High.
+  It will also use the following uart :
+    * 2 for AX12
+    * 4 for Zigbee
+    * 3 for Camera
+    * 6 for Lidar
+  Conclusion : take care when you use this package ! For more information, see
+  Hw.Hw_Config.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Julien Brette &amp; Julien Romero
+</pre>
+<p class="item_name">USES</p>
+<pre>    <a href="../drivers/stm32-gpio_ads.html#robo100">Stm32.GPIO</a>, <a href="../drivers/stm32-uart_ads.html#robo293">Stm32.UART</a>
+</pre>
+
+<hr />
+<a name="Hw2eUART2fRead"></a>
+<a name="robo2"></a><h2>Hw.UART/Read [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Read</strong> -- <strong>Read</strong> a char on uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    C := <strong>Read</strong>(UART);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    <strong>Read</strong> a Character on the given UART.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart peripharal to read, of type <a href="#robo5">UART_Line</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    C - The Character read.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo5">UART_Line</a>
+</pre>
+
+<hr />
+<a name="Hw2eUART2fSend"></a>
+<a name="robo3"></a><h2>Hw.UART/Send [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Send</strong> -- <strong>Send</strong> a message on uart.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Send</strong>(UART,S);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    <strong>Send</strong> a string on the given uart line.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART - The uart peripheral, of type <a href="#robo5">UART_Line</a>.
+    S    - The String to send.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>   <a href="#robo5">UART_Line</a>
+</pre>
+
+<hr />
+<a name="Hw2eUART2fUART5fDesc"></a>
+<a name="robo4"></a><h2>Hw.UART/UART_Desc [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Desc</strong> -- Description of an UART peripheral.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    This type is used inside the .adb to initialize the different peripherals.
+  If you want to add one, add it in the hw-hw_config.ads and at the end of the
+  hw-uart.adb.
+  You must define the following fields of the record :
+    * UART_Tx : The UART number of the transmission, of type <a href="../drivers/stm32-uart_ads.html#robo298">UART_Number</a>.
+    * UART_Rx : The UART number of the reception, of type <a href="../drivers/stm32-uart_ads.html#robo298">UART_Number</a>.
+    * Tx : The transmission pin, of type <a href="../drivers/stm32-gpio_ads.html#robo95">Pin_Type</a>.
+    * Rx : The recption pin, of type <a href="../drivers/stm32-gpio_ads.html#robo95">Pin_Type</a>.
+    * En : The enable pin, of type <a href="../drivers/stm32-gpio_ads.html#robo95">Pin_Type</a>.
+    * Use_En : Activation of enable pin, of type Boolean.
+    * Tx_PP : Activation of Push/Pull on transmission pin, of type Boolean.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="../drivers/stm32-uart_ads.html#robo293">Stm32.UART</a>/<a href="../drivers/stm32-uart_ads.html#robo298">UART_Number</a>, <a href="../drivers/stm32-gpio_ads.html#robo100">Stm32.GPIO</a>/<a href="../drivers/stm32-gpio_ads.html#robo95">Pin_Type</a>
+</pre>
+
+<hr />
+<a name="Hw2eUART2fUART5fLine"></a>
+<a name="robo5"></a><h2>Hw.UART/UART_Line [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>UART_Line</strong> -- The different personal UART peripherals.
+</pre>
+<p class="item_name">USAGE</p>
+<pre>    Choose between :
+      * AX_1 for AX12
+      * Zigbee for Zigbee
+      * Camera for the camera
+      * Lidar for the Lidar
+</pre>
+
+<hr />
+<a name="Hw2eUART2fWait"></a>
+<a name="robo6"></a><h2>Hw.UART/Wait [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Hw.UART</a> ] [ <a href="../../robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>Wait</strong> -- <strong>Wait</strong> and read a character on uart for 0.1 second.
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    <strong>Wait</strong>(UART, C, Timeout);
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    <a href="../drivers/stm32-i2c_ads.html#robo121">Read</a> a Character on the given uart. If there is nothing to read for 0.1
+  second, the function return that the reading failed.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    UART    - The uart line, of type <a href="#robo5">UART_Line</a>.
+    C       - An out Character that contains the read Character.
+    Timeout - An out Boolean to say if the reading succeeded.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo5">UART_Line</a>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./hwinterface/stm32/hw-uart.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.42 on Sat Jan 31 2015 13:47:56
+</p>
+</div> <!-- footer -->
+</body>
+</html>

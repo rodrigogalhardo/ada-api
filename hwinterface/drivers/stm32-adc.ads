@@ -251,7 +251,7 @@ package Stm32.ADC is
 --    DMA_Mode_Type -- The DMA mode for multi ADC mode.
 --  USAGE
 --    Choose between :
---      * Disable : Disable DMA
+--      * Disabled : Disable DMA
 --      * Mode_1 : A Half-word transfered for each DMA request.
 --      * Mode_2 : Two half-words transfered for each DMA request.
 --      * Mode_3 : A half-word transfered for each DMA request but composed of two differents conversions.
@@ -426,7 +426,7 @@ package Stm32.ADC is
 --
 --*****
 
-  type ADC_Flag is (AWD, EOC, JEOC, JSTRT, OVR, STRT);
+  type ADC_Flag is (AWD, EOC, JEOC, JSTRT, STRT, OVR);
   for ADC_Flag'Size use 8;
   for ADC_Flag use (
     AWD   => 16#01#,
@@ -449,7 +449,7 @@ package Stm32.ADC is
 --
 --*****
 
-  type ADC_IT is (IT_EOC, IT_AWD, IT_JEOC, IT_OVR);
+  type ADC_IT is (IT_AWD, IT_EOC, IT_JEOC, IT_OVR);
   for ADC_IT'Size use 16;
   for ADC_IT use (
     IT_AWD  => 16#0106#,
@@ -462,7 +462,7 @@ package Stm32.ADC is
 --  NAME
 --    ADC_Init -- Initializes an ADC.
 --  SYNOPSIS
---    ADC_Inti(ADC, Params);
+--    ADC_Init(ADC, Params);
 --  FUNCTION
 --    Initializes an ADC with the given parameters.
 --  INPUTS
@@ -504,7 +504,7 @@ package Stm32.ADC is
 --    ADC - The ADC number, of type ADC_Number.
 --    State - Activation of ADC, of type FunctionalState.
 --  SEE ALSO
---    ADC_Number, Stm23.Defines/FunctionalState
+--    ADC_Number, Stm32.Defines/FunctionalState
 --
 --*****
 
@@ -662,7 +662,6 @@ package Stm32.ADC is
 --*****
 
   procedure ADC_ClearFlag (ADC : ADC_Number; Flag : ADC_Flag);
-  pragma Import (C, ADC_ClearFlag, "ADC_ClearFlag");
 
 --****f* Stm32.ADC/ADC_TempSensorVrefintCmd
 --
@@ -701,7 +700,43 @@ package Stm32.ADC is
 
   procedure ADC_ITConfig (ADC    : ADC_Number;
                           IT : ADC_IT;
-			  State : FunctionalState);
-  pragma Import (C, ADC_ITConfig, "ADC_ITConfig");
+                          State : FunctionalState);
+
+--****f* Stm32.ADC/ADC_GetConversionValue
+--
+--  NAME
+--    ADC_GetConversionValue -- Gets the value of the conversion.
+--  SYNOPSIS
+--    Value := ADC_GetConversionValue(ADC);
+--  FUNCTION
+--    Gets the value of the conversion on the given ADC.
+--  INPUTS
+--    ADC - The ADC number, of type ADC_Number.
+--  RESULT
+--    Value - An Unsigned_16 representing the value of the measure.
+--  SEE ALSO
+--    ADC_Number
+--
+--*****
+
+  function ADC_GetConversionValue (ADC : ADC_Number) return Unsigned_16;
+
+--****f* Stm32.ADC/ADC_VBATCmd
+--
+--  NAME
+--    ADC_VBATCmd -- Activates VBAT.
+--  SYNOPSIS
+--    ADC_VBATCmd(State);
+--  FUNCTION
+--    Activates or desactivates VBAT.
+--  INPUTS
+--    State - The new state of VBAT, of type FunctionalState.
+--  SEE ALSO
+--    Stm32.Defines/FunctionalState.
+--
+--*****
+
+  procedure ADC_VBATCmd (State : FunctionalState);
+  pragma Import (C, ADC_VBATCmd, "ADC_VBATCmd");
 
 end Stm32.ADC;

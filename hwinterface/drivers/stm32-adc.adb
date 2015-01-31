@@ -68,7 +68,12 @@ package body Stm32.ADC is
   procedure ADC_DMARequestAfterLastTransferCmd (ADC : ADC_TypeDef;
                                                 State : FunctionalState);
   pragma Import (C, ADC_DMARequestAfterLastTransferCmd,
-                 "ADC_DMARequestAfterLastTransferCmd");
+      "ADC_DMARequestAfterLastTransferCmd");
+
+  procedure ITConfig (ADC : ADC_TypeDef;
+                      IT  : ADC_IT;
+                      State : FunctionalState);
+  pragma Import (C, ITConfig, "ADC_ITConfig");
 
   ----------------------
   -- PUBLIC FUNCTIONS --
@@ -166,11 +171,46 @@ package body Stm32.ADC is
 
   function ADC_GetFlagStatus (ADC : ADC_Number;
                               Flag : ADC_Flag) return Boolean is
-    function GetFlagStatus (ADC : ADC_Number;
-                            Flag : ADC_Flag) return Unsigned_32;
-    pragma Import (C, GetFlagStatus, "ADC_GetFlagStatus");
+    type Bit_Index is range 0..7;
+    type Bool8 is array (Bit_Index) of Boolean;
+    pragma Pack (Bool8);
+    for Bool8'Size use 8;
+    SR_Register : Bool8;
+    for SR_Register'Address use System'To_Address(16#40012000# +
+        (ADC_Number'Pos(ADC) - 1) * 16#0100#);
   begin
-    return GetFlagStatus(ADC) /= 0;
+      if (SR_Register(ADC_Flag'Pos(Flag))) then
+          return True;
+      else
+          return False;
+      end if;
   end ADC_GetFlagStatus;
 
+  procedure ADC_ClearFlag (ADC : ADC_Number;
+                              Flag : ADC_Flag) is
+    type Bit_Index is range 0..7;
+    type Bool8 is array (Bit_Index) of Boolean;
+    pragma Pack (Bool8);
+    for Bool8'Size use 8;
+    SR_Register : Bool8;
+    for SR_Register'Address use System'To_Address(16#40012000# +
+        (ADC_Number'Pos(ADC) - 1) * 16#0100#);
+  begin
+      SR_Register(ADC_Flag'Pos(Flag)) := False;
+  end ADC_ClearFlag;
+
+  function ADC_GetConversionValue (ADC : ADC_Number) return Unsigned_16 is
+    DR_Register : Unsigned_16;
+    for DR_Register'Address use System'To_Address(16#40012000# +
+        (ADC_Number'Pos(ADC) - 1) * 16#0100# + 16#004C#);
+  begin
+    return DR_Register;
+  end ADC_GetConversionValue;
+
+  procedure ADC_ITConfig (ADC    : ADC_Number;
+                          IT : ADC_IT;
+                          State : FunctionalState) is
+  begin
+    ITConfig(ADCs(ADC), IT, State);
+  end ADC_ITConfig;
 end Stm32.ADC;

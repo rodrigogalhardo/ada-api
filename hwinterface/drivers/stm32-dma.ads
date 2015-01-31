@@ -433,7 +433,7 @@ package Stm32.DMA is
 --    Size - An Integer representing the new size of the buffer.
 --  SEE ALSO
 --    DMA_Stream_Type, System/Address
---  
+--
 --*****
 
   procedure Start_Transfer (DMA : DMA_Stream_Type;
