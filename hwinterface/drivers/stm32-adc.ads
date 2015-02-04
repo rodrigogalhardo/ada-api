@@ -634,7 +634,7 @@ package Stm32.ADC is
 --    Gets the value of a given ADC flag.
 --  INPUTS
 --    ADC  - The ADC number, of type ADC_Number.
---    Flag - The flag to clear, of type ADC_Flag.
+--    Flag - The flag to get, of type ADC_Flag.
 --  RESULT
 --    Result - A boolean representing the status of the given flag.
 --  SEE ALSO
